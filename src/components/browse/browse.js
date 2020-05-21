@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import Card from 'react-bootstrap/Card'
+import { ArrowRight } from 'react-bootstrap-icons';
 import './browse.css'
+
 const Browse = (props) => {
   return(
     <div>
@@ -8,30 +9,36 @@ const Browse = (props) => {
         <div className = "section">
           <div className = "flex">
             <div className = "f3">
-              <div className = "card">
-                <img src = "laptop.jpg" className = "w-100 rounded"/>
-                <div className = "cText">
-                  <p>asgag</p>
-                  <p>asgag</p>
+              <div className = "card3">
+                <div className = "image rounded">
+                  <img src = "laptopsCover.jpg" className = "w-100"/>
+                  <div className = "cText">
+                    <p>Laptops</p>
+                    <p>View collection</p>
+                  </div>
                 </div>
               </div>
             </div>
             <div className = "f3">
-              <div className = "card">
-              <img src = "laptop.jpg" className = "w-100 rounded"/>
-              <div className = "cText">
-                <p>asgag</p>
-                <p>asgag</p>
-              </div>
+              <div className = "card3">
+                <div className = "image rounded">
+                  <img src = "computersCover.jpg" className = "w-100"/>
+                  <div className = "cText">
+                    <p>Computers</p>
+                    <p>View collection</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div className = "f3">
-              <div className = "card">
-              <img src = "laptop.jpg" className = "w-100 rounded"/>
-              <div className = "cText">
-                <p>asgag</p>
-                <p>asgag</p>
-              </div>
+              <div className = "card3">
+                <div className = "image rounded">
+                  <img src = "accesoriesCover.jpg" className = "w-100"/>
+                  <div className = "cText">
+                    <p>Accessories</p>
+                    <p>View collection</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -39,31 +46,26 @@ const Browse = (props) => {
       <h2 className = "center" >Phones and Tablets</h2>
       <div className = "section">
         <div className = "flex">
-          <div className = "f3">
-            <div className = "card">
-              <img src = "laptop.jpg" className = "w-100 rounded"/>
-              <div className = "cText">
-                <p>asgag</p>
-                <p>asgag</p>
+          <div className = "f2">
+            <div className = "card2">
+              <div className = "image rounded">
+                <img src = "phoneCover.jpg" className = "w-100"/>
+                <div className = "cText">
+                  <p>Phones</p>
+                  <p>View collection</p>
+                </div>
               </div>
             </div>
           </div>
-          <div className = "f3">
-            <div className = "card">
-            <img src = "laptop.jpg" className = "w-100 rounded"/>
-            <div className = "cText">
-              <p>asgag</p>
-              <p>asgag</p>
-            </div>
-            </div>
-          </div>
-          <div className = "f3">
-            <div className = "card">
-            <img src = "laptop.jpg" className = "w-100 rounded"/>
-            <div className = "cText">
-              <p>asgag</p>
-              <p>asgag</p>
-            </div>
+          <div className = "f2">
+            <div className = "card2">
+              <div className = "image rounded">
+                <img src = "tabletCover.jpg" className = "w-100"/>
+                <div className = "cText">
+                  <p>Tablets</p>
+                  <p>View collection</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -72,8 +74,10 @@ const Browse = (props) => {
       <div className = "section">
         <div className = "flex">
           <div className = "f3">
-            <div className = "card">
-              <img src = "laptop.jpg" className = "w-100 rounded"/>
+            <div className = "card3">
+              <div className = "image rounded">
+                <img src = "laptop.jpg" className = "w-100"/>
+              </div>
               <div className = "cText">
                 <p>asgag</p>
                 <p>asgag</p>
@@ -81,21 +85,25 @@ const Browse = (props) => {
             </div>
           </div>
           <div className = "f3">
-            <div className = "card">
-            <img src = "laptop.jpg" className = "w-100 rounded"/>
-            <div className = "cText">
-              <p>asgag</p>
-              <p>asgag</p>
-            </div>
+            <div className = "card3">
+              <div className = "image rounded">
+                <img src = "laptop.jpg" className = "w-100"/>
+              </div>
+              <div className = "cText">
+                <p>asgag</p>
+                <p>asgag</p>
+              </div>
             </div>
           </div>
           <div className = "f3">
-            <div className = "card">
-            <img src = "laptop.jpg" className = "w-100 rounded"/>
-            <div className = "cText">
-              <p>asgag</p>
-              <p>asgag</p>
-            </div>
+            <div className = "card3">
+              <div className = "image rounded">
+                <img src = "laptop.jpg" className = "w-100"/>
+              </div>
+              <div className = "cText">
+                <p>asgag</p>
+                <p>asgag</p>
+              </div>
             </div>
           </div>
         </div>
