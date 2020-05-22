@@ -1,3 +1,7 @@
+#root{
+  background-color: #EAEAEA;
+}
+
 .App {
   text-align: center;
 }
@@ -41,6 +45,12 @@
   text-align: center;
 }
 
-.m-t20{
-  margin-top: 20px;
+.m-tb50-30{
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.m-tb80-30{
+  margin-top: 80px;
+  margin-bottom: 40px;
 }

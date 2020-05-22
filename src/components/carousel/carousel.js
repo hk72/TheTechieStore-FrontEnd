@@ -42,7 +42,7 @@ const CarouselItem = (props) =>  {
         />
 
         <Carousel.Caption>
-          <h3>Wearable Technology</h3>
+          <h3>Electronics</h3>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>

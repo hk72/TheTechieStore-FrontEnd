@@ -1,7 +1,13 @@
-.section{
-  padding-left: 10px!important;
-  padding-right: 10px!important;
-  width: 100vw!important;
+.section3{
+  margin-left: 10px!important;
+  margin-right: 10px!important;
+  width: calc(100vw - 20px)!important;
+}
+
+.section2{
+  margin-left: 50px!important;
+  margin-right: 50px!important;
+  width: calc(100vw - 100px)!important;
 }
 
 .card3{
@@ -12,6 +18,8 @@
   background: #fff;
   width: 85%;
   margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .card2{
@@ -22,6 +30,8 @@
   background: #fff;
   width: 90%;
   margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .flex{

@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { Route } from 'react-router'
 import Carousel from './components/carousel/carousel'
 import Browse from './components/browse/browse'
+import Footer from './components/footer/footer'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           </div>
         }/>
       </BrowserRouter>
+      <Footer/>
     </div>
   );
 }
