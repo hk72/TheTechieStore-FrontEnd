@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import history from '../../history'
 import './browse.css'
 
 const Browse = (props) => {
@@ -8,34 +9,31 @@ const Browse = (props) => {
         <div className = "section3">
           <div className = "flex">
             <div className = "f3">
-              <div className = "card3">
+              <div className = "card3" onClick = { () => {history.push('/laptops')}}>
                 <div className = "image rounded">
                   <img src = "laptopsCover.jpg" className = "w-100"/>
                   <div className = "cText">
                     <p>Laptops</p>
-                    <p>View collection</p>
                   </div>
                 </div>
               </div>
             </div>
             <div className = "f3">
-              <div className = "card3">
+              <div className = "card3" onClick = { () => {history.push('/computers')}}>
                 <div className = "image rounded">
                   <img src = "computersCover.jpg" className = "w-100"/>
-                  <div className = "cText">
+                  <div className = "cText wbg">
                     <p>Computers</p>
-                    <p>View collection</p>
                   </div>
                 </div>
               </div>
             </div>
             <div className = "f3">
-              <div className = "card3">
+              <div className = "card3" onClick = { () => {history.push('/accessories')}}>
                 <div className = "image rounded">
                   <img src = "accesoriesCover.jpg" className = "w-100"/>
                   <div className = "cText">
                     <p>Accessories</p>
-                    <p>View collection</p>
                   </div>
                 </div>
               </div>
@@ -46,23 +44,21 @@ const Browse = (props) => {
       <div className = "section2">
         <div className = "flex">
           <div className = "f2">
-            <div className = "card2">
+            <div className = "card2" onClick = { () => {history.push('/phones')}}>
               <div className = "image rounded">
                 <img src = "phoneCover.jpg" className = "w-100"/>
                 <div className = "cText">
                   <p>Phones</p>
-                  <p>View collection</p>
                 </div>
               </div>
             </div>
           </div>
           <div className = "f2">
-            <div className = "card2">
+            <div className = "card2" onClick = { () => {history.push('/tablets')}}>
               <div className = "image rounded">
                 <img src = "tabletCover.jpg" className = "w-100"/>
                 <div className = "cText">
                   <p>Tablets</p>
-                  <p>View collection</p>
                 </div>
               </div>
             </div>
@@ -73,34 +69,31 @@ const Browse = (props) => {
       <div className = "section">
         <div className = "flex">
           <div className = "f3">
-            <div className = "card3">
+            <div className = "card3" onClick = { () => {history.push('/headphones')}}>
               <div className = "image rounded">
                 <img src = "headphonesCover.jpg" className = "w-100"/>
                 <div className = "cText">
                   <p>Headphones</p>
-                  <p>View collection</p>
                 </div>
               </div>
             </div>
           </div>
           <div className = "f3">
-            <div className = "card3">
+            <div className = "card3" onClick = { () => {history.push('/smartWatches')}}>
               <div className = "image rounded">
                 <img src = "watchCover.jpg" className = "w-100"/>
                 <div className = "cText">
                   <p>Smart Watch</p>
-                  <p>View collection</p>
                 </div>
               </div>
             </div>
           </div>
           <div className = "f3">
-            <div className = "card3">
+            <div className = "card3" onClick = { () => {history.push('/smartHome')}}>
               <div className = "image rounded">
                 <img src = "smarthomeCover.jpg" className = "w-100"/>
                 <div className = "cText">
                   <p>Smart Home</p>
-                  <p>View collection</p>
                 </div>
               </div>
             </div>
