@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import history from '../../history'
-import './navbar.css'
+
 
 const Navbar = (props) => {
   return(
@@ -8,10 +8,10 @@ const Navbar = (props) => {
       <nav>
           <ul>
             <li>
-              <a onClick = { () => {history.push('/cart')}}>Cart</a>
+              <p onClick = { () => {history.push('/cart')}}>Cart</p>
             </li>
             <li>
-              <a onClick = { () => {history.push('/account')}}>Account</a>
+              <p onClick = { () => {history.push('/account')}}>Account</p>
             </li>
           </ul>
         </nav>

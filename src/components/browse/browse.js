@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import history from '../../history'
-import './browse.css'
+
 
 const Browse = (props) => {
   return(
@@ -10,7 +10,7 @@ const Browse = (props) => {
           <div className = "flex">
             <div className = "f3">
               <div className = "card3" onClick = { () => {history.push('/laptops')}}>
-                <div className = "image rounded">
+                <div className = "imageSlide rounded">
                   <img src = "laptopsCover.jpg" className = "w-100"/>
                   <div className = "cText">
                     <p>Laptops</p>
@@ -20,7 +20,7 @@ const Browse = (props) => {
             </div>
             <div className = "f3">
               <div className = "card3" onClick = { () => {history.push('/computers')}}>
-                <div className = "image rounded">
+                <div className = "imageSlide rounded">
                   <img src = "computersCover.jpg" className = "w-100"/>
                   <div className = "cText wbg">
                     <p>Computers</p>
@@ -30,7 +30,7 @@ const Browse = (props) => {
             </div>
             <div className = "f3">
               <div className = "card3" onClick = { () => {history.push('/accessories')}}>
-                <div className = "image rounded">
+                <div className = "imageSlide rounded">
                   <img src = "accesoriesCover.jpg" className = "w-100"/>
                   <div className = "cText">
                     <p>Accessories</p>
@@ -45,7 +45,7 @@ const Browse = (props) => {
         <div className = "flex">
           <div className = "f2">
             <div className = "card2" onClick = { () => {history.push('/phones')}}>
-              <div className = "image rounded">
+              <div className = "imageSlide rounded">
                 <img src = "phoneCover.jpg" className = "w-100"/>
                 <div className = "cText">
                   <p>Phones</p>
@@ -55,7 +55,7 @@ const Browse = (props) => {
           </div>
           <div className = "f2">
             <div className = "card2" onClick = { () => {history.push('/tablets')}}>
-              <div className = "image rounded">
+              <div className = "imageSlide rounded">
                 <img src = "tabletCover.jpg" className = "w-100"/>
                 <div className = "cText">
                   <p>Tablets</p>
@@ -70,7 +70,7 @@ const Browse = (props) => {
         <div className = "flex">
           <div className = "f3">
             <div className = "card3" onClick = { () => {history.push('/headphones')}}>
-              <div className = "image rounded">
+              <div className = "imageSlide rounded">
                 <img src = "headphonesCover.jpg" className = "w-100"/>
                 <div className = "cText">
                   <p>Headphones</p>
@@ -80,7 +80,7 @@ const Browse = (props) => {
           </div>
           <div className = "f3">
             <div className = "card3" onClick = { () => {history.push('/smartWatches')}}>
-              <div className = "image rounded">
+              <div className = "imageSlide rounded">
                 <img src = "watchCover.jpg" className = "w-100"/>
                 <div className = "cText">
                   <p>Smart Watch</p>
@@ -90,7 +90,7 @@ const Browse = (props) => {
           </div>
           <div className = "f3">
             <div className = "card3" onClick = { () => {history.push('/smartHome')}}>
-              <div className = "image rounded">
+              <div className = "imageSlide rounded">
                 <img src = "smarthomeCover.jpg" className = "w-100"/>
                 <div className = "cText">
                   <p>Smart Home</p>

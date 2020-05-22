@@ -1,7 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import Button from 'react-bootstrap/Button'
-import './carousel.css'
 
 const CarouselItem = (props) =>  {
   const [index, setIndex] = useState(0);
