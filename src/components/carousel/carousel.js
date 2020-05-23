@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import Button from 'react-bootstrap/Button'
+import history from '../../history'
 
 const CarouselItem = (props) =>  {
   const [index, setIndex] = useState(0);
@@ -10,7 +11,7 @@ const CarouselItem = (props) =>  {
   };
   return(
     <div>
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel activeIndex={index} onSelect={handleSelect} interval = {3000}>
       <Carousel.Item>
         <img
           className="d-block w-100 maxHeight"
@@ -19,7 +20,10 @@ const CarouselItem = (props) =>  {
         />
         <Carousel.Caption>
           <h3>Computers</h3>
-          <Button variant="outline-light">View Collection</Button>
+          <Button variant="outline-light" onClick = {() => {
+            history.push('/computers')
+            window.scrollTo(0, 0)
+          }}>View Collection</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -30,8 +34,11 @@ const CarouselItem = (props) =>  {
         />
 
         <Carousel.Caption>
-          <h3>Phones and Tablets</h3>
-          <Button variant="outline-light">View Collection</Button>
+          <h3>Phones</h3>
+          <Button variant="outline-light" onClick = {() => {
+            history.push('/phones')
+            window.scrollTo(0, 0)
+          }}>View Collection</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -42,8 +49,11 @@ const CarouselItem = (props) =>  {
         />
 
         <Carousel.Caption>
-          <h3>Electronics</h3>
-          <Button variant="outline-light">View Collection</Button>
+          <h3>Headphones</h3>
+          <Button variant="outline-light" onClick = {() => {
+            history.push('/headphones')
+            window.scrollTo(0, 0)
+          }}>View Collection</Button>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

@@ -9,7 +9,10 @@ const Browse = (props) => {
         <div className = "section3">
           <div className = "flex">
             <div className = "f3">
-              <div className = "card3" onClick = { () => {history.push('/laptops')}}>
+              <div className = "card3" onClick = { () => {
+                history.push('/laptops')
+                window.scrollTo(0, 0)
+               }}>
                 <div className = "imageSlide rounded">
                   <img src = "laptopsCover.jpg" className = "w-100"/>
                   <div className = "cText">
@@ -19,7 +22,10 @@ const Browse = (props) => {
               </div>
             </div>
             <div className = "f3">
-              <div className = "card3" onClick = { () => {history.push('/computers')}}>
+              <div className = "card3" onClick = { () => {
+                history.push('/computers')
+                window.scrollTo(0, 0)
+              }}>
                 <div className = "imageSlide rounded">
                   <img src = "computersCover.jpg" className = "w-100"/>
                   <div className = "cText wbg">
@@ -29,7 +35,10 @@ const Browse = (props) => {
               </div>
             </div>
             <div className = "f3">
-              <div className = "card3" onClick = { () => {history.push('/accessories')}}>
+              <div className = "card3" onClick = { () => {
+                history.push('/accessories')
+                window.scrollTo(0, 0)
+              }}>
                 <div className = "imageSlide rounded">
                   <img src = "accesoriesCover.jpg" className = "w-100"/>
                   <div className = "cText">
@@ -44,7 +53,10 @@ const Browse = (props) => {
       <div className = "section2">
         <div className = "flex">
           <div className = "f2">
-            <div className = "card2" onClick = { () => {history.push('/phones')}}>
+            <div className = "card2" onClick = { () => {
+              history.push('/phones')
+              window.scrollTo(0, 0)
+            }}>
               <div className = "imageSlide rounded">
                 <img src = "phoneCover.jpg" className = "w-100"/>
                 <div className = "cText">
@@ -54,7 +66,10 @@ const Browse = (props) => {
             </div>
           </div>
           <div className = "f2">
-            <div className = "card2" onClick = { () => {history.push('/tablets')}}>
+            <div className = "card2" onClick = { () => {
+              history.push('/tablets')
+              window.scrollTo(0, 0)
+            }}>
               <div className = "imageSlide rounded">
                 <img src = "tabletCover.jpg" className = "w-100"/>
                 <div className = "cText">
@@ -69,7 +84,10 @@ const Browse = (props) => {
       <div className = "section">
         <div className = "flex">
           <div className = "f3">
-            <div className = "card3" onClick = { () => {history.push('/headphones')}}>
+            <div className = "card3" onClick = { () => {
+              history.push('/headphones')
+              window.scrollTo(0, 0)
+            }}>
               <div className = "imageSlide rounded">
                 <img src = "headphonesCover.jpg" className = "w-100"/>
                 <div className = "cText">
@@ -79,7 +97,10 @@ const Browse = (props) => {
             </div>
           </div>
           <div className = "f3">
-            <div className = "card3" onClick = { () => {history.push('/smartWatches')}}>
+            <div className = "card3" onClick = { () => {
+              history.push('/smartWatches')
+              window.scrollTo(0, 0)
+            }}>
               <div className = "imageSlide rounded">
                 <img src = "watchCover.jpg" className = "w-100"/>
                 <div className = "cText">
@@ -89,7 +110,10 @@ const Browse = (props) => {
             </div>
           </div>
           <div className = "f3">
-            <div className = "card3" onClick = { () => {history.push('/smartHome')}}>
+            <div className = "card3" onClick = { () => {
+              history.push('/smartHomes')
+              window.scrollTo(0, 0)
+            }}>
               <div className = "imageSlide rounded">
                 <img src = "smarthomeCover.jpg" className = "w-100"/>
                 <div className = "cText">
