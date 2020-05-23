@@ -2,6 +2,7 @@ import React from 'react'
 import Button from 'react-bootstrap/Button'
 
 const Laptop = (props) => {
+
   return(
     <div>
       <h2 className = "center m-tb50-30" >Apple</h2>

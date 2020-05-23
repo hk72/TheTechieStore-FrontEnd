@@ -1,22 +1,14 @@
 import React, { useEffect } from 'react'
+import Button from 'react-bootstrap/Button'
 import history from '../../history'
 
 const Browse = (props) => {
 
-  useEffect(() =>
-      fetch('http://localhost:5000/user', {
-          method: 'GET',
-          credentials: 'include',
-          headers: {
-              'Content-Type': 'application/json',
-          }
-      })
-      .then(res => res.json())
-      .then(post =>{
-          console.log("in browse", post)
-      })
-  )
-
+  useEffect(() =>{
+    if(localStorage.shopping_cart === undefined){
+      localStorage.setItem('shopping_cart', '')
+    }
+  })
 
   return(
     <div>
