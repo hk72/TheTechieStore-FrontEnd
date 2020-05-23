@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import history from '../../history'
 
-
 const Browse = (props) => {
+
+  useEffect(() =>
+      fetch('http://localhost:5000/user', {
+          method: 'GET',
+          credentials: 'include',
+          headers: {
+              'Content-Type': 'application/json',
+          }
+      })
+      .then(res => res.json())
+      .then(post =>{
+          console.log("in browse", post)
+      })
+  )
+
+
   return(
     <div>
       <h2 className = "center m-tb50-30" >Computers</h2>

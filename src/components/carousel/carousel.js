@@ -19,9 +19,9 @@ const CarouselItem = (props) =>  {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>Computers</h3>
+          <h3>Laptops</h3>
           <Button variant="outline-light" onClick = {() => {
-            history.push('/computers')
+            history.push('/laptops')
             window.scrollTo(0, 0)
           }}>View Collection</Button>
         </Carousel.Caption>
