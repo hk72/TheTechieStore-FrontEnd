@@ -3,6 +3,10 @@ import Button from 'react-bootstrap/Button'
 
 const Laptop = (props) => {
 
+  const addToCart = () => {
+    console.log("worked")
+  }
+
   return(
     <div>
       <h2 className = "center m-tb50-30" >Apple</h2>
@@ -23,7 +27,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -44,7 +48,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -65,7 +69,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -91,7 +95,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -112,7 +116,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -133,7 +137,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -159,7 +163,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -180,7 +184,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -201,7 +205,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>

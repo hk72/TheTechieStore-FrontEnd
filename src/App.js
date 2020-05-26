@@ -20,6 +20,7 @@ import Account from './components/account/account'
 
 
 function App() {
+
   return (
     <div>
       <Navbar/>
