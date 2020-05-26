@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 const Cart = (props) => {
 
   useEffect(() =>{
-    fetch('http://localhost:5000/user/viewCart',{
+    fetch('http://localhost:5000/api/user/viewCart',{
       method: 'POST',
       headers:{
           'Content-Type':'application/json'

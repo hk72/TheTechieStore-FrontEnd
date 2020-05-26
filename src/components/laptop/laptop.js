@@ -3,9 +3,10 @@ import Button from 'react-bootstrap/Button'
 
 const Laptop = (props) => {
 
-  const addToCart = () => {
-    console.log("worked")
+  const addToCart = (item) => {
+    localStorage.shopping_cart = localStorage.shopping_cart + item
   }
+
 
   return(
     <div>
@@ -17,7 +18,7 @@ const Laptop = (props) => {
               <div className = "imageExpand rounded">
                 <img src = "computersCover.jpg" className = "w-100"/>
                 <div className = "cText wbg">
-                  <p>Computers</p>
+                  <p>MacBook Air</p>
                 </div>
                 <div className = "details">
                   <div className = "contents">
@@ -27,7 +28,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -48,7 +49,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(2)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -69,7 +70,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(3)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -95,7 +96,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(4)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -116,7 +117,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(5)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -137,7 +138,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(6)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -163,7 +164,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(7)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -184,28 +185,7 @@ const Laptop = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className = "f3">
-            <div className = "card3">
-              <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>Computers</p>
-                </div>
-                <div className = "details">
-                  <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart()}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(8)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>

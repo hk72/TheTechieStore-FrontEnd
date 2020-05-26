@@ -2,6 +2,11 @@ import React from 'react'
 import Button from 'react-bootstrap/Button'
 
 const Accessories = (props) => {
+
+  const addToCart = (item) => {
+    localStorage.shopping_cart = localStorage.shopping_cart + item
+  }
+
   return(
     <div>
       <h2 className = "center m-tb50-30" >Apple</h2>
@@ -22,7 +27,7 @@ const Accessories = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(9)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -43,7 +48,7 @@ const Accessories = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -64,7 +69,7 @@ const Accessories = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -90,7 +95,7 @@ const Accessories = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -111,7 +116,7 @@ const Accessories = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -132,7 +137,7 @@ const Accessories = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -158,7 +163,7 @@ const Accessories = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -179,7 +184,7 @@ const Accessories = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -200,7 +205,7 @@ const Accessories = (props) => {
                     osdngknsdgknpsakngas
                     oansdgnpasngdknas
                     pansdgoaskngda</p>
-                    <p><Button variant="outline-light">Add to Cart</Button></p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
