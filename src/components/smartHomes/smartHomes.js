@@ -1,7 +1,15 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Button from 'react-bootstrap/Button'
 
 const SmartHome = (props) => {
+
+  const [laptops, setLaptops] = useState({"1":{}, "2":{}, "3":{}, "4":{}, "5":{}, "6":{}, "7":{}, "8":{}})
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/product")
+    .then(res => res.json())
+    .then(res => setLaptops(res.products))
+  },[])
 
   const addToCart = (item) => {
     localStorage.shopping_cart = localStorage.shopping_cart + item

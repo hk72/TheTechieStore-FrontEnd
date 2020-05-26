@@ -8,7 +8,7 @@ const Browse = (props) => {
     if(localStorage.shopping_cart === undefined){
       localStorage.setItem('shopping_cart', '')
     }
-  })
+  },[])
 
   return(
     <div>

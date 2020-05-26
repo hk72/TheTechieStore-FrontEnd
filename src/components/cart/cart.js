@@ -14,7 +14,7 @@ const Cart = (props) => {
       .then(user => {
           console.log(user)
     })
-  })
+  },[])
 
 
   return(
