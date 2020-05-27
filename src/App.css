@@ -102,13 +102,13 @@ nav ul li p {
 .f3{
   text-align: center;
   flex: 33.3333%;
-  min-height: 200px;
+  min-height: 140px;
 }
 
 .f2{
   text-align: center;
   flex: 50%;
-  min-height: 200px;
+  min-height: 140px;
 }
 
 .section2{
@@ -216,6 +216,11 @@ nav ul li p {
 .minImageHeight{
   min-height: 140px;
 }
+
+.minHeight{
+  min-height: calc(100vh - 130px);
+}
+
 
 @media (max-width: 800px) {
   .section2{
