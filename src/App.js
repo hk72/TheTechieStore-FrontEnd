@@ -13,7 +13,7 @@ import Accessories from './components/accessories/accessories'
 import Headphone from './components/headphones/headphones'
 import Phone from './components/phones/phones'
 import SmartHome from './components/smartHomes/smartHomes'
-import SmartWatch from './components/smartWatches/smartWatches'
+import Watch from './components/watches/watches'
 import Tablet from './components/tablets/tablets'
 import Cart from './components/cart/cart'
 import Account from './components/account/account'
@@ -37,7 +37,7 @@ function App() {
         <Route exact path = '/headphones' component = {Headphone}/>
         <Route exact path = '/phones' component = {Phone}/>
         <Route exact path = '/smartHomes' component = {SmartHome}/>
-        <Route exact path = '/smartWatches' component = {SmartWatch}/>
+        <Route exact path = '/watches' component = {Watch}/>
         <Route exact path = '/tablets' component = {Tablet}/>
         <Route exact path = '/cart' component = {Cart}/>
         <Route exact path = '/account' component = {Account}/>

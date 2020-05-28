@@ -18,7 +18,7 @@ const Cart = (props) => {
 
 
   return(
-    <div>
+    <div className = "minHeight">
       <h1>Carts</h1>
     </div>
   )

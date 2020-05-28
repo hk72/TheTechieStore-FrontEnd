@@ -111,13 +111,37 @@ nav ul li p {
   min-height: 140px;
 }
 
+.f1{
+  text-align: center;
+  flex: 50%;
+  min-height: 140px;
+}
+
 .section2{
   margin-left: 50px!important;
   margin-right: 50px!important;
   width: calc(100vw - 100px)!important;
 }
 
+.section1{
+  margin-left: 100px!important;
+  margin-right: 100px!important;
+  width: calc(100vw - 200px)!important;
+}
+
 .card2{
+  position: relative;
+  display: flex;
+  min-width: 0;
+  word-wrap: break-word;
+  background: #fff;
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.card1{
   position: relative;
   display: flex;
   min-width: 0;

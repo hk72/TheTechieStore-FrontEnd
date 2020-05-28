@@ -3,12 +3,12 @@ import Button from 'react-bootstrap/Button'
 
 const SmartHome = (props) => {
 
-  const [laptops, setLaptops] = useState({"1":{}, "2":{}, "3":{}, "4":{}, "5":{}, "6":{}, "7":{}, "8":{}})
+  const [smartHome, setSmartHome] = useState({"34":{}, "35":{}, "36":{}, "37":{}, "38":{}})
 
   useEffect(() => {
     fetch("http://localhost:5000/api/product")
     .then(res => res.json())
-    .then(res => setLaptops(res.products))
+    .then(res => setSmartHome(res.products))
   },[])
 
   const addToCart = (item) => {
@@ -16,68 +16,61 @@ const SmartHome = (props) => {
   }
 
   return(
-    <div>
+    <div className = "minHeight">
+      <h2 className = "center m-tb50-30" >Google</h2>
+      <div className = "section2">
+        <div className = "flex">
+          <div className = "f2">
+            <div className = "card2 minImageHeight">
+              <div className = "imageExpand rounded">
+                <img src = {smartHome[34].IMAGE} alt = "Smart Home" className = "w-100"/>
+                <div className = "cText wbg">
+                  <p>{smartHome[34].NAME}</p>
+                </div>
+                <div className = "details">
+                  <div className = "contents">
+                    <p>Cost: {smartHome[34].PRICE}</p>
+                    <p>Description: {smartHome[34].DESCRIPTION}</p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(34)}>Add to Cart</Button></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className = "f2">
+            <div className = "card2 minImageHeight">
+              <div className = "imageExpand rounded">
+                <img src = {smartHome[35].IMAGE} alt = "Smart Home" className = "w-100"/>
+                <div className = "cText wbg">
+                  <p>{smartHome[35].NAME}</p>
+                </div>
+                <div className = "details">
+                  <div className = "contents">
+                    <p>Cost: {smartHome[35].PRICE}</p>
+                    <p>Description: {smartHome[35].DESCRIPTION}</p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(35)}>Add to Cart</Button></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <h2 className = "center m-tb50-30" >Apple</h2>
-      <div className = "section3">
+      <div className = "section1">
         <div className = "flex">
-          <div className = "f3">
-            <div className = "card3">
+          <div className = "f1">
+            <div className = "card1 minImageHeight">
               <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
+                <img src = {smartHome[36].IMAGE} alt = "Smart Home" className = "w-100"/>
                 <div className = "cText wbg">
-                  <p>Computers</p>
+                  <p>{smartHome[36].NAME}</p>
                 </div>
                 <div className = "details">
                   <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className = "f3">
-            <div className = "card3">
-              <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>Computers</p>
-                </div>
-                <div className = "details">
-                  <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className = "f3">
-            <div className = "card3">
-              <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>Computers</p>
-                </div>
-                <div className = "details">
-                  <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
+                    <p>Cost: {smartHome[36].PRICE}</p>
+                    <p>Description: {smartHome[36].DESCRIPTION}</p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(36)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -85,135 +78,38 @@ const SmartHome = (props) => {
           </div>
         </div>
       </div>
-      <h2 className = "center m-tb50-30" >Dell</h2>
-      <div className = "section3">
+      <h2 className = "center m-tb50-30" >Amazon</h2>
+      <div className = "section2">
         <div className = "flex">
-          <div className = "f3">
-            <div className = "card3">
+          <div className = "f2">
+            <div className = "card2 minImageHeight">
               <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
+                <img src = {smartHome[37].IMAGE} alt = "Smart Home" className = "w-100"/>
                 <div className = "cText wbg">
-                  <p>Computers</p>
+                  <p>{smartHome[37].NAME}</p>
                 </div>
                 <div className = "details">
                   <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
+                    <p>Cost: {smartHome[37].PRICE}</p>
+                    <p>Description: {smartHome[37].DESCRIPTION}</p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(37)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className = "f3">
-            <div className = "card3">
+          <div className = "f2">
+            <div className = "card2 minImageHeight">
               <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
+                <img src = {smartHome[38].IMAGE} alt = "Smart Home" className = "w-100"/>
                 <div className = "cText wbg">
-                  <p>Computers</p>
+                  <p>{smartHome[38].NAME}</p>
                 </div>
                 <div className = "details">
                   <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className = "f3">
-            <div className = "card3">
-              <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>Computers</p>
-                </div>
-                <div className = "details">
-                  <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h2 className = "center m-tb50-30" >HP</h2>
-      <div className = "section3">
-        <div className = "flex">
-          <div className = "f3">
-            <div className = "card3">
-              <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>Computers</p>
-                </div>
-                <div className = "details">
-                  <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className = "f3">
-            <div className = "card3">
-              <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>Computers</p>
-                </div>
-                <div className = "details">
-                  <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className = "f3">
-            <div className = "card3">
-              <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>Computers</p>
-                </div>
-                <div className = "details">
-                  <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
+                    <p>Cost: {smartHome[38].PRICE}</p>
+                    <p>Description: {smartHome[38].DESCRIPTION}</p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(38)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>

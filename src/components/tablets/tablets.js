@@ -3,12 +3,12 @@ import Button from 'react-bootstrap/Button'
 
 const Tablet = (props) => {
 
-  const [laptops, setLaptops] = useState({"1":{}, "2":{}, "3":{}, "4":{}, "5":{}, "6":{}, "7":{}, "8":{}})
+  const [tablets, setTablets] = useState({"23":{}, "24":{}})
 
   useEffect(() => {
     fetch("http://localhost:5000/api/product")
     .then(res => res.json())
-    .then(res => setLaptops(res.products))
+    .then(res => setTablets(res.products))
   },[])
 
   const addToCart = (item) => {
@@ -16,219 +16,46 @@ const Tablet = (props) => {
   }
 
   return(
-    <div>
-      {
-        laptops === undefined
-        ?
-        <div></div>
-        :
-        <div>
-        <h2 className = "center m-tb50-30" >Apple</h2>
-        <div className = "section3">
-          <div className = "flex">
-            <div className = "f3">
-              <div className = "card3">
-                <div className = "imageExpand rounded">
-                  <img src = "computersCover.jpg" className = "w-100"/>
-                  <div className = "cText wbg">
-                    <p></p>
-                  </div>
-                  <div className = "details">
-                    <div className = "contents">
-                      <p></p>
-                      <p>Description: isupmsdnapsdgonsdgnksndgkn
-                      nsdkgnpsamndgnsagdknpsag
-                      osdngknsdgknpsakngas
-                      oansdgnpasngdknas
-                      pansdgoaskngda</p>
-                      <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                    </div>
+    <div className = "minHeight">
+      <h2 className = "center m-tb50-30" >Apple</h2>
+      <div className = "section2">
+        <div className = "flex">
+          <div className = "f2">
+            <div className = "card2 minImageHeight">
+              <div className = "imageExpand rounded">
+                <img src = {tablets[23].IMAGE} alt = "Tablets" className = "w-100"/>
+                <div className = "cText wbg">
+                  <p>{tablets[23].NAME}</p>
+                </div>
+                <div className = "details">
+                  <div className = "contents">
+                    <p>Cost: {tablets[23].PRICE}</p>
+                    <p>Description: {tablets[23].DESCRIPTION}</p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(23)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className = "f3">
-              <div className = "card3">
-                <div className = "imageExpand rounded">
-                  <img src = "computersCover.jpg" className = "w-100"/>
-                  <div className = "cText wbg">
-                    <p>Computers</p>
-                  </div>
-                  <div className = "details">
-                    <div className = "contents">
-                      <p>Cost: $9.00</p>
-                      <p>Description: isupmsdnapsdgonsdgnksndgkn
-                      nsdkgnpsamndgnsagdknpsag
-                      osdngknsdgknpsakngas
-                      oansdgnpasngdknas
-                      pansdgoaskngda</p>
-                      <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                    </div>
-                  </div>
+          </div>
+          <div className = "f2">
+            <div className = "card2 minImageHeight">
+              <div className = "imageExpand rounded">
+                <img src = {tablets[24].IMAGE} alt = "Tablets" className = "w-100"/>
+                <div className = "cText wbg">
+                  <p>{tablets[24].NAME}</p>
                 </div>
-              </div>
-            </div>
-            <div className = "f3">
-              <div className = "card3">
-                <div className = "imageExpand rounded">
-                  <img src = "computersCover.jpg" className = "w-100"/>
-                  <div className = "cText wbg">
-                    <p>Computers</p>
-                  </div>
-                  <div className = "details">
-                    <div className = "contents">
-                      <p>Cost: $9.00</p>
-                      <p>Description: isupmsdnapsdgonsdgnksndgkn
-                      nsdkgnpsamndgnsagdknpsag
-                      osdngknsdgknpsakngas
-                      oansdgnpasngdknas
-                      pansdgoaskngda</p>
-                      <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                    </div>
+                <div className = "details">
+                  <div className = "contents">
+                    <p>Cost: {tablets[24].PRICE}</p>
+                    <p>Description: {tablets[24].DESCRIPTION}</p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(24)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <h2 className = "center m-tb50-30" >Dell</h2>
-        <div className = "section3">
-          <div className = "flex">
-            <div className = "f3">
-              <div className = "card3">
-                <div className = "imageExpand rounded">
-                  <img src = "computersCover.jpg" className = "w-100"/>
-                  <div className = "cText wbg">
-                    <p>Computers</p>
-                  </div>
-                  <div className = "details">
-                    <div className = "contents">
-                      <p>Cost: $9.00</p>
-                      <p>Description: isupmsdnapsdgonsdgnksndgkn
-                      nsdkgnpsamndgnsagdknpsag
-                      osdngknsdgknpsakngas
-                      oansdgnpasngdknas
-                      pansdgoaskngda</p>
-                      <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className = "f3">
-              <div className = "card3">
-                <div className = "imageExpand rounded">
-                  <img src = "computersCover.jpg" className = "w-100"/>
-                  <div className = "cText wbg">
-                    <p>Computers</p>
-                  </div>
-                  <div className = "details">
-                    <div className = "contents">
-                      <p>Cost: $9.00</p>
-                      <p>Description: isupmsdnapsdgonsdgnksndgkn
-                      nsdkgnpsamndgnsagdknpsag
-                      osdngknsdgknpsakngas
-                      oansdgnpasngdknas
-                      pansdgoaskngda</p>
-                      <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className = "f3">
-              <div className = "card3">
-                <div className = "imageExpand rounded">
-                  <img src = "computersCover.jpg" className = "w-100"/>
-                  <div className = "cText wbg">
-                    <p>Computers</p>
-                  </div>
-                  <div className = "details">
-                    <div className = "contents">
-                      <p>Cost: $9.00</p>
-                      <p>Description: isupmsdnapsdgonsdgnksndgkn
-                      nsdkgnpsamndgnsagdknpsag
-                      osdngknsdgknpsakngas
-                      oansdgnpasngdknas
-                      pansdgoaskngda</p>
-                      <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <h2 className = "center m-tb50-30" >HP</h2>
-        <div className = "section3">
-          <div className = "flex">
-            <div className = "f3">
-              <div className = "card3">
-                <div className = "imageExpand rounded">
-                  <img src = "computersCover.jpg" className = "w-100"/>
-                  <div className = "cText wbg">
-                    <p>Computers</p>
-                  </div>
-                  <div className = "details">
-                    <div className = "contents">
-                      <p>Cost: $9.00</p>
-                      <p>Description: isupmsdnapsdgonsdgnksndgkn
-                      nsdkgnpsamndgnsagdknpsag
-                      osdngknsdgknpsakngas
-                      oansdgnpasngdknas
-                      pansdgoaskngda</p>
-                      <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className = "f3">
-              <div className = "card3">
-                <div className = "imageExpand rounded">
-                  <img src = "computersCover.jpg" className = "w-100"/>
-                  <div className = "cText wbg">
-                    <p>Computers</p>
-                  </div>
-                  <div className = "details">
-                    <div className = "contents">
-                      <p>Cost: $9.00</p>
-                      <p>Description: isupmsdnapsdgonsdgnksndgkn
-                      nsdkgnpsamndgnsagdknpsag
-                      osdngknsdgknpsakngas
-                      oansdgnpasngdknas
-                      pansdgoaskngda</p>
-                      <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className = "f3">
-              <div className = "card3">
-                <div className = "imageExpand rounded">
-                  <img src = "computersCover.jpg" className = "w-100"/>
-                  <div className = "cText wbg">
-                    <p>Computers</p>
-                  </div>
-                  <div className = "details">
-                    <div className = "contents">
-                      <p>Cost: $9.00</p>
-                      <p>Description: isupmsdnapsdgonsdgnksndgkn
-                      nsdkgnpsamndgnsagdknpsag
-                      osdngknsdgknpsakngas
-                      oansdgnpasngdknas
-                      pansdgoaskngda</p>
-                      <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-      }
+      </div>
     </div>
   )
 }

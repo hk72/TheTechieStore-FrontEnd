@@ -11,7 +11,7 @@ const Browse = (props) => {
   },[])
 
   return(
-    <div>
+    <div className = "minHeight">
       <h2 className = "center m-tb50-30" >Computers</h2>
         <div className = "section3">
           <div className = "flex">
@@ -105,13 +105,13 @@ const Browse = (props) => {
           </div>
           <div className = "f3">
             <div className = "card3" onClick = { () => {
-              history.push('/smartWatches')
+              history.push('/watches')
               window.scrollTo(0, 0)
             }}>
               <div className = "imageSlide rounded">
                 <img src = "watchCover.jpg" className = "w-100"/>
                 <div className = "cText">
-                  <p>Smart Watch</p>
+                  <p>Watch</p>
                 </div>
               </div>
             </div>

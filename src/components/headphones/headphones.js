@@ -3,12 +3,12 @@ import Button from 'react-bootstrap/Button'
 
 const Headphone = (props) => {
 
-  const [laptops, setLaptops] = useState({"1":{}, "2":{}, "3":{}, "4":{}, "5":{}, "6":{}, "7":{}, "8":{}})
+  const [headphones, setHeadphones] = useState({"25":{}, "26":{}, "27":{}, "28":{}, "29":{}})
 
   useEffect(() => {
     fetch("http://localhost:5000/api/product")
     .then(res => res.json())
-    .then(res => setLaptops(res.products))
+    .then(res => setHeadphones(res.products))
   },[])
 
   const addToCart = (item) => {
@@ -16,68 +16,56 @@ const Headphone = (props) => {
   }
 
   return(
-    <div>
-      <h2 className = "center m-tb50-30" >Apple</h2>
+    <div className = "minHeight">
+      <h2 className = "center m-tb50-30" >Over Ear</h2>
       <div className = "section3">
         <div className = "flex">
           <div className = "f3">
-            <div className = "card3">
+            <div className = "card3 minImageHeight">
               <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
+                <img src = {headphones[25].IMAGE} alt = "Headphones" className = "w-100"/>
                 <div className = "cText wbg">
-                  <p>Computers</p>
+                  <p>{headphones[25].NAME}</p>
                 </div>
                 <div className = "details">
                   <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
+                    <p>Cost: {headphones[25].PRICE}</p>
+                    <p>Description: {headphones[25].DESCRIPTION}</p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(25)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div className = "f3">
-            <div className = "card3">
+            <div className = "card3 minImageHeight">
               <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
+                <img src = {headphones[26].IMAGE} alt = "Headphones" className = "w-100"/>
                 <div className = "cText wbg">
-                  <p>Computers</p>
+                  <p>{headphones[26].NAME}</p>
                 </div>
                 <div className = "details">
                   <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
+                    <p>Cost: {headphones[26].PRICE}</p>
+                    <p>Description: {headphones[26].DESCRIPTION}</p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(26)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div className = "f3">
-            <div className = "card3">
+            <div className = "card3 minImageHeight">
               <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
+                <img src = {headphones[27].IMAGE} alt = "Headphones" className = "w-100"/>
                 <div className = "cText wbg">
-                  <p>Computers</p>
+                  <p>{headphones[27].NAME}</p>
                 </div>
                 <div className = "details">
                   <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
+                    <p>Cost: {headphones[27].PRICE}</p>
+                    <p>Description: {headphones[27].DESCRIPTION}</p>
+                    <p><Button variant="outline-light" onClick = {() => addToCart(27)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -85,136 +73,38 @@ const Headphone = (props) => {
           </div>
         </div>
       </div>
-      <h2 className = "center m-tb50-30" >Dell</h2>
-      <div className = "section3">
-        <div className = "flex">
-          <div className = "f3">
-            <div className = "card3">
-              <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>Computers</p>
-                </div>
-                <div className = "details">
-                  <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                  </div>
-                </div>
+    <h2 className = "center m-tb50-30" >In Ear</h2>
+    <div className = "section2">
+      <div className = "flex">
+        <div className = "f2">
+          <div className = "card2 minImageHeight">
+            <div className = "imageExpand rounded">
+              <img src = {headphones[28].IMAGE} alt = "Headphones" className = "w-100"/>
+              <div className = "cText wbg">
+                <p>{headphones[28].NAME}</p>
               </div>
-            </div>
-          </div>
-          <div className = "f3">
-            <div className = "card3">
-              <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>Computers</p>
-                </div>
-                <div className = "details">
-                  <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className = "f3">
-            <div className = "card3">
-              <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>Computers</p>
-                </div>
-                <div className = "details">
-                  <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                  </div>
+              <div className = "details">
+                <div className = "contents">
+                  <p>Cost: {headphones[28].PRICE}</p>
+                  <p>Description: {headphones[28].DESCRIPTION}</p>
+                  <p><Button variant="outline-light" onClick = {() => addToCart(28)}>Add to Cart</Button></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <h2 className = "center m-tb50-30" >HP</h2>
-      <div className = "section3">
-        <div className = "flex">
-          <div className = "f3">
-            <div className = "card3">
-              <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>Computers</p>
-                </div>
-                <div className = "details">
-                  <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                  </div>
-                </div>
+        <div className = "f2">
+          <div className = "card2 minImageHeight">
+            <div className = "imageExpand rounded">
+              <img src = {headphones[29].IMAGE} alt = "Headphones" className = "w-100"/>
+              <div className = "cText wbg">
+                <p>{headphones[29].NAME}</p>
               </div>
-            </div>
-          </div>
-          <div className = "f3">
-            <div className = "card3">
-              <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>Computers</p>
-                </div>
-                <div className = "details">
-                  <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className = "f3">
-            <div className = "card3">
-              <div className = "imageExpand rounded">
-                <img src = "computersCover.jpg" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>Computers</p>
-                </div>
-                <div className = "details">
-                  <div className = "contents">
-                    <p>Cost: $9.00</p>
-                    <p>Description: isupmsdnapsdgonsdgnksndgkn
-                    nsdkgnpsamndgnsagdknpsag
-                    osdngknsdgknpsakngas
-                    oansdgnpasngdknas
-                    pansdgoaskngda</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(1)}>Add to Cart</Button></p>
-                  </div>
+              <div className = "details">
+                <div className = "contents">
+                  <p>Cost: {headphones[29].PRICE}</p>
+                  <p>Description: {headphones[29].DESCRIPTION}</p>
+                  <p><Button variant="outline-light" onClick = {() => addToCart(29)}>Add to Cart</Button></p>
                 </div>
               </div>
             </div>
@@ -222,6 +112,7 @@ const Headphone = (props) => {
         </div>
       </div>
     </div>
+  </div>
   )
 }
 

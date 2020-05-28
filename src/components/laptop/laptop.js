@@ -16,7 +16,7 @@ const Laptop = (props) => {
   }
 
   return(
-    <div>
+    <div className = "minHeight">
       <h2 className = "center m-tb50-30" >Apple</h2>
       <div className = "section3">
         <div className = "flex">
