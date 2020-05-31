@@ -3,17 +3,16 @@ import React from 'react'
 const Card = (props) => {
   return(
     <div>
-    // {console.log(props)}
       <div className = "card3 minImageHeight">
         <div className = "imageExpand rounded">
-          <img src = "computersCover.jpg" alt = "Headphones" className = "w-100"/>
+          <img src ={props.info.IMAGE} alt = "Headphones" className = "w-100"/>
           <div className = "cText wbg">
-            <p>{}</p>
+            <p>{props.info.NAME}</p>
           </div>
           <div className = "details">
             <div className = "contents">
-              <p>Cost: {}</p>
-              <p>Description: {}</p>
+              <p>Cost: {props.info.PRICE}</p>
+              <p>Description: {props.info.DESCRIPTION}</p>
             </div>
           </div>
         </div>

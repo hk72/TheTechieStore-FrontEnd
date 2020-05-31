@@ -57,10 +57,11 @@ const reducer = ( state, action ) => {
       if(localStorage.shopping_cart === undefined){
         localStorage.setItem('shopping_cart', '')
       }
-      if(!localStorage.shopping_cart.includes(action.payload) && (localStorage.shopping_cart !== '')){
+      const localStorageArray = localStorage.shopping_cart.split(',')
+      if(!localStorageArray.includes(action.payload.toString()) && (localStorage.shopping_cart !== '')){
         localStorage.shopping_cart = localStorage.shopping_cart + ',' + action.payload
       }
-      else if(!localStorage.shopping_cart.includes(action.payload)){
+      else if(!localStorageArray.includes(action.payload.toString())){
         localStorage.shopping_cart = localStorage.shopping_cart + action.payload
       }
     break

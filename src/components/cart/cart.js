@@ -28,7 +28,6 @@ const Cart = (props) => {
           </div>
         :
         <div>
-        {console.log("cart", cart)}
           <h2 className = "center m-tb50-30" >Cart</h2>
           <div className = "section3">
             <div >
