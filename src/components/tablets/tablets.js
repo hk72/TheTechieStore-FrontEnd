@@ -1,19 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import Button from 'react-bootstrap/Button'
+import { connect } from 'react-redux'
 
 const Tablet = (props) => {
-
-  const [tablets, setTablets] = useState({"23":{}, "24":{}})
-
-  useEffect(() => {
-    fetch("http://localhost:5000/api/product")
-    .then(res => res.json())
-    .then(res => setTablets(res.products))
-  },[])
-
-  const addToCart = (item) => {
-    localStorage.shopping_cart = localStorage.shopping_cart + item
-  }
 
   return(
     <div className = "minHeight">
@@ -23,15 +12,15 @@ const Tablet = (props) => {
           <div className = "f2">
             <div className = "card2 minImageHeight">
               <div className = "imageExpand rounded">
-                <img src = {tablets[23].IMAGE} alt = "Tablets" className = "w-100"/>
+                <img src = {props.products[23].IMAGE} alt = "Tablets" className = "w-100"/>
                 <div className = "cText wbg">
-                  <p>{tablets[23].NAME}</p>
+                  <p>{props.products[23].NAME}</p>
                 </div>
                 <div className = "details">
                   <div className = "contents">
-                    <p>Cost: {tablets[23].PRICE}</p>
-                    <p>Description: {tablets[23].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(23)}>Add to Cart</Button></p>
+                    <p>Cost: {props.products[23].PRICE}</p>
+                    <p>Description: {props.products[23].DESCRIPTION}</p>
+                    <p><Button variant="outline-light" onClick = {() => props.addToCart(23)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -40,15 +29,15 @@ const Tablet = (props) => {
           <div className = "f2">
             <div className = "card2 minImageHeight">
               <div className = "imageExpand rounded">
-                <img src = {tablets[24].IMAGE} alt = "Tablets" className = "w-100"/>
+                <img src = {props.products[24].IMAGE} alt = "Tablets" className = "w-100"/>
                 <div className = "cText wbg">
-                  <p>{tablets[24].NAME}</p>
+                  <p>{props.products[24].NAME}</p>
                 </div>
                 <div className = "details">
                   <div className = "contents">
-                    <p>Cost: {tablets[24].PRICE}</p>
-                    <p>Description: {tablets[24].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(24)}>Add to Cart</Button></p>
+                    <p>Cost: {props.products[24].PRICE}</p>
+                    <p>Description: {props.products[24].DESCRIPTION}</p>
+                    <p><Button variant="outline-light" onClick = {() => props.addToCart(24)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -60,4 +49,14 @@ const Tablet = (props) => {
   )
 }
 
-export default Tablet
+const mapStateToProps = state => ({
+  products: state.products
+})
+
+const mapDispatchToProps = {
+  addToCart: data => {
+    return { payload: data, type: 'ADD_TO_CART',}
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Tablet)

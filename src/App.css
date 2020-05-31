@@ -24,7 +24,6 @@
   max-height: 100vh;
 }
 
-
 .footer{
   height: 80px;
   width: 100vw;
@@ -81,10 +80,23 @@ nav ul li p {
   width: calc(100vw - 20px)!important;
 }
 
+.sectionWrap{
+  margin-left: 10px!important;
+  margin-right: 10px!important;
+  width: calc(100vw - 20px)!important;
+}
+
 .flex{
   display: flex;
   width: 100%;
   text-align: center;
+}
+
+.flexWrap{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 .card3{
@@ -94,6 +106,18 @@ nav ul li p {
   word-wrap: break-word;
   background: #fff;
   width: 85%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.cardWrap{
+  position: relative;
+  display: flex;
+  min-width: 0;
+  word-wrap: break-word;
+  background: #fff;
+  width: 33%;
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 5px;
@@ -225,6 +249,9 @@ nav ul li p {
 .card2:hover .details{
   transform: scaleY(1);
 }
+.card1:hover .details{
+  transform: scaleY(1);
+}
 
 .contents{
   text-align: left;
@@ -252,7 +279,11 @@ nav ul li p {
     margin-right: 10px!important;
     width: calc(100vw - 20px)!important;
   }
-
+  .section1{
+    margin-left: 10px!important;
+    margin-right: 10px!important;
+    width: calc(100vw - 20px)!important;
+  }
   .flex{
     flex-direction: column;
   }
@@ -260,6 +291,10 @@ nav ul li p {
     margin-bottom: 20px;
   }
   .card2{
+    width: 85%;
+    margin-bottom: 20px;
+  }
+  .card1{
     width: 85%;
     margin-bottom: 20px;
   }

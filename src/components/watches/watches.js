@@ -1,19 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import Button from 'react-bootstrap/Button'
+import { connect } from 'react-redux'
 
 const SmartWatch = (props) => {
-
-  const [watch, setWatch] = useState({"30":{}, "31":{}, "32":{}, "33":{}})
-
-  useEffect(() => {
-    fetch("http://localhost:5000/api/product")
-    .then(res => res.json())
-    .then(res => setWatch(res.products))
-  },[])
-
-  const addToCart = (item) => {
-    localStorage.shopping_cart = localStorage.shopping_cart + item
-  }
 
   return(
     <div className = "minHeight">
@@ -23,15 +12,15 @@ const SmartWatch = (props) => {
           <div className = "f2">
             <div className = "card2 minImageHeight">
               <div className = "imageExpand rounded">
-                <img src = {watch[30].IMAGE} alt = "Watches" className = "w-100"/>
+                <img src = {props.products[30].IMAGE} alt = "Watches" className = "w-100"/>
                 <div className = "cText wbg">
-                  <p>{watch[30].NAME}</p>
+                  <p>{props.products[30].NAME}</p>
                 </div>
                 <div className = "details">
                   <div className = "contents">
-                    <p>Cost: {watch[30].PRICE}</p>
-                    <p>Description: {watch[30].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(30)}>Add to Cart</Button></p>
+                    <p>Cost: {props.products[30].PRICE}</p>
+                    <p>Description: {props.products[30].DESCRIPTION}</p>
+                    <p><Button variant="outline-light" onClick = {() => props.addToCart(30)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -40,15 +29,15 @@ const SmartWatch = (props) => {
           <div className = "f2">
             <div className = "card2 minImageHeight">
               <div className = "imageExpand rounded">
-                <img src = {watch[31].IMAGE} alt = "Watches" className = "w-100"/>
+                <img src = {props.products[31].IMAGE} alt = "Watches" className = "w-100"/>
                 <div className = "cText wbg">
-                  <p>{watch[31].NAME}</p>
+                  <p>{props.products[31].NAME}</p>
                 </div>
                 <div className = "details">
                   <div className = "contents">
-                    <p>Cost: {watch[31].PRICE}</p>
-                    <p>Description: {watch[31].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(31)}>Add to Cart</Button></p>
+                    <p>Cost: {props.products[31].PRICE}</p>
+                    <p>Description: {props.products[31].DESCRIPTION}</p>
+                    <p><Button variant="outline-light" onClick = {() => props.addToCart(31)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -62,15 +51,15 @@ const SmartWatch = (props) => {
           <div className = "f2">
             <div className = "card2 minImageHeight">
               <div className = "imageExpand rounded">
-                <img src = {watch[32].IMAGE} alt = "Watches" className = "w-100"/>
+                <img src = {props.products[32].IMAGE} alt = "Watches" className = "w-100"/>
                 <div className = "cText wbg">
-                  <p>{watch[32].NAME}</p>
+                  <p>{props.products[32].NAME}</p>
                 </div>
                 <div className = "details">
                   <div className = "contents">
-                    <p>Cost: {watch[32].PRICE}</p>
-                    <p>Description: {watch[32].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(32)}>Add to Cart</Button></p>
+                    <p>Cost: {props.products[32].PRICE}</p>
+                    <p>Description: {props.products[32].DESCRIPTION}</p>
+                    <p><Button variant="outline-light" onClick = {() => props.addToCart(32)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -79,15 +68,15 @@ const SmartWatch = (props) => {
           <div className = "f2">
             <div className = "card2 minImageHeight">
               <div className = "imageExpand rounded">
-                <img src = {watch[33].IMAGE} alt = "Watches" className = "w-100"/>
+                <img src = {props.products[33].IMAGE} alt = "Watches" className = "w-100"/>
                 <div className = "cText wbg">
-                  <p>{watch[33].NAME}</p>
+                  <p>{props.products[33].NAME}</p>
                 </div>
                 <div className = "details">
                   <div className = "contents">
-                    <p>Cost: {watch[33].PRICE}</p>
-                    <p>Description: {watch[33].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => addToCart(33)}>Add to Cart</Button></p>
+                    <p>Cost: {props.products[33].PRICE}</p>
+                    <p>Description: {props.products[33].DESCRIPTION}</p>
+                    <p><Button variant="outline-light" onClick = {() => props.addToCart(33)}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -99,4 +88,14 @@ const SmartWatch = (props) => {
   )
 }
 
-export default SmartWatch
+const mapStateToProps = state => ({
+  products: state.products
+})
+
+const mapDispatchToProps = {
+  addToCart: data => {
+    return { payload: data, type: 'ADD_TO_CART',}
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SmartWatch)

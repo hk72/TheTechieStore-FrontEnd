@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import { Router } from 'react-router-dom'
 import { Route } from 'react-router'
+import { connect } from 'react-redux'
 import history from './history'
 import Carousel from './components/carousel/carousel'
 import Browse from './components/browse/browse'
@@ -19,7 +20,13 @@ import Cart from './components/cart/cart'
 import Account from './components/account/account'
 
 
-function App() {
+const App = (props) => {
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/product")
+    .then(res => res.json())
+    .then(res => props.getProducts(res.products))
+  },[])
 
   return (
     <div>
@@ -47,4 +54,10 @@ function App() {
   );
 }
 
-export default App;
+const mapDispatchToProps = {
+  getProducts: data => {
+    return { payload: data, type: 'GET_PRODUCTS',}
+  }
+}
+
+export default connect(null, mapDispatchToProps)(App);
