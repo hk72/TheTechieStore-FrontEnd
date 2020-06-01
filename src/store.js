@@ -41,7 +41,8 @@ const initialState = {
               "36":{},
               "37":{},
               "38":{}
-            }
+            },
+  cart: null
 }
 
 const reducer = ( state, action ) => {
@@ -53,7 +54,6 @@ const reducer = ( state, action ) => {
       }
     break
     case 'ADD_TO_CART':
-    console.log(action.payload)
       if(localStorage.shopping_cart === undefined){
         localStorage.setItem('shopping_cart', '')
       }
@@ -65,7 +65,44 @@ const reducer = ( state, action ) => {
         localStorage.shopping_cart = localStorage.shopping_cart + action.payload
       }
     break
+    case 'GET_CART':
+      state = {
+        ...state,
+        cart: action.payload
+      }
+    break
+    case 'REMOVE_FROM_CART':
+      state = {
+        ...state,
+        cart: state.cart.filter(element => {
+          return element !== action.payload
+        })
+      }
+      const localStorageArr = localStorage.shopping_cart.split(',')
+      const filtered = localStorageArr.filter(element => {
+        return element !== action.payload.ID.toString()
+      })
+      localStorage.shopping_cart = filtered.join(',')
+    break
+    case 'HANDLE_QUANTITY':
+      if(localStorage.quantity === undefined){
+        localStorage.setItem('quantity', '')
+      }
+      const localStorageQuantityArray = localStorage.quantity.split(',')
+      const indexOfRequest = localStorageQuantityArray.indexOf(action.ID + '=' + action.quantity-1)
+      console.log(action.quantity)
+      console.log(indexOfRequest)
+      if(localStorage.quantity === ''){
+        localStorage.quantity = localStorage.quantity + action.ID + '=' + action.quantity
+      }
+      else if(localStorage.quantity !== ''){
+        localStorageQuantityArray[indexOfRequest] = action.ID + '=' + action.quantity
+              console.log(localStorageQuantityArray)
+        localStorage.quantity = localStorageQuantityArray
+      }
+    break
   }
+
   return state
 }
 

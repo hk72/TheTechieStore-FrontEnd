@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
 import Card from './card'
 
 const Cart = (props) => {
-
-  const [cart, setCart] = useState(null)
 
   useEffect(() =>{
     fetch('http://localhost:5000/api/product/cart',{
@@ -14,14 +13,14 @@ const Cart = (props) => {
       body:JSON.stringify({'localStorage': localStorage.shopping_cart})
       })
       .then(res => res.json())
-      .then(user => {
-        setCart(user.objects)
+      .then(payload => {
+        props.getCart(payload.objects)
     })
   },[])
 
   return(
     <div className = "minHeight">
-      {cart === null
+      {props.cart === null
         ?
           <div>
           <h2> x</h2>
@@ -29,10 +28,8 @@ const Cart = (props) => {
         :
         <div>
           <h2 className = "center m-tb50-30" >Cart</h2>
-          <div className = "section3">
-            <div >
-              {cart.map(info => <Card key = {info.ID} info = {info}/>)}
-            </div>
+          <div >
+            {props.cart.map(info => <Card  key = {info.ID} info = {info}/>)}
           </div>
         </div>
       }
@@ -40,4 +37,14 @@ const Cart = (props) => {
   )
 }
 
-export default Cart
+const mapStateToProps = state => ({
+  cart: state.cart
+})
+
+const mapDispatchToProps = {
+  getCart: data => {
+    return { payload: data, type: 'GET_CART',}
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart)

@@ -80,24 +80,12 @@ nav ul li p {
   width: calc(100vw - 20px)!important;
 }
 
-.sectionWrap{
-  margin-left: 10px!important;
-  margin-right: 10px!important;
-  width: calc(100vw - 20px)!important;
-}
-
 .flex{
   display: flex;
   width: 100%;
   text-align: center;
 }
 
-.flexWrap{
-  display: flex;
-  width: 100%;
-  text-align: center;
-  flex-wrap: wrap;
-}
 
 .card3{
   position: relative;
@@ -111,16 +99,20 @@ nav ul li p {
   border-radius: 5px;
 }
 
-.cardWrap{
+.cartCard{
   position: relative;
-  display: flex;
   min-width: 0;
   word-wrap: break-word;
   background: #fff;
-  width: 33%;
+  width: 100%;
   margin: 0 auto;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 0px;
+}
+
+.maxWidth33 img{
+  max-width: 100%;
+  min-height: 100%;
 }
 
 .f3{
@@ -135,12 +127,33 @@ nav ul li p {
   min-height: 140px;
 }
 
+.f75{
+  text-align: left;
+  flex: 70%;
+  min-height: 100px;
+}
+.f75 p {
+  padding-left: 10px;
+}
+.f25{
+  text-align: center;
+  flex: 30%;
+  min-height: 100px;
+}
 .f1{
   text-align: center;
   flex: 50%;
   min-height: 140px;
 }
-
+.f25 img{
+  overflow: hidden;
+}
+.displayInline{
+  margin-bottom: 10px;
+}
+.displayInline p{
+  display: inline;
+}
 .section2{
   margin-left: 50px!important;
   margin-right: 50px!important;
@@ -298,5 +311,14 @@ nav ul li p {
     width: 85%;
     margin-bottom: 20px;
   }
-
+  .f25{
+    text-align: center;
+    flex: 25%;
+    min-height: 100px;
+  }
+  .f75{
+    text-align: left;
+    flex: 5%;
+    min-height: 100px;
+  }
 }
