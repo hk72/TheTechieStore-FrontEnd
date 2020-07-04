@@ -20,7 +20,10 @@ const SmartHome = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[34].PRICE}</p>
                     <p>Description: {props.products[34].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(34)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(34, 1)
+                      props.addToCart(34)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -37,7 +40,10 @@ const SmartHome = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[35].PRICE}</p>
                     <p>Description: {props.products[35].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(35)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(35, 1)
+                      props.addToCart(35)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -59,7 +65,10 @@ const SmartHome = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[36].PRICE}</p>
                     <p>Description: {props.products[36].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(36)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(36, 1)
+                      props.addToCart(36)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -81,7 +90,10 @@ const SmartHome = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[37].PRICE}</p>
                     <p>Description: {props.products[37].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(37)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(37, 1)
+                      props.addToCart(37)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -98,7 +110,10 @@ const SmartHome = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[38].PRICE}</p>
                     <p>Description: {props.products[38].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(38)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(38, 1)
+                      props.addToCart(38)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -117,6 +132,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   addToCart: data => {
     return { payload: data, type: 'ADD_TO_CART',}
+  },
+  updateQuantities: (id, quantity) => {
+    return { id: id, quantity: quantity, type: 'UPDATE_QUANTITY'}
   }
 }
 

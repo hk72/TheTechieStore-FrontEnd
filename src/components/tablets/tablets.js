@@ -20,7 +20,10 @@ const Tablet = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[23].PRICE}</p>
                     <p>Description: {props.products[23].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(23)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(23, 1)
+                      props.addToCart(23)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -37,7 +40,10 @@ const Tablet = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[24].PRICE}</p>
                     <p>Description: {props.products[24].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(24)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(24, 1)
+                      props.addToCart(24)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -56,6 +62,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   addToCart: data => {
     return { payload: data, type: 'ADD_TO_CART',}
+  },
+  updateQuantities: (id, quantity) => {
+    return { id: id, quantity: quantity, type: 'UPDATE_QUANTITY'}
   }
 }
 

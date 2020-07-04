@@ -86,6 +86,11 @@ nav ul li p {
   text-align: center;
 }
 
+.flexH{
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
 
 .card3{
   position: relative;
@@ -102,12 +107,24 @@ nav ul li p {
 .cartCard{
   position: relative;
   min-width: 0;
+  max-height: 250px;
+  min-height: 250px;
   word-wrap: break-word;
   background: #fff;
   width: 100%;
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 0px;
+}
+
+.overflowYAuto{
+  min-height: 80px;
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+.spacing25{
+  padding: 25px;
 }
 
 .maxWidth33 img{
@@ -134,11 +151,13 @@ nav ul li p {
 }
 .f75 p {
   padding-left: 10px;
+  padding-right: 10px;
 }
 .f25{
   text-align: center;
   flex: 30%;
   min-height: 100px;
+  overflow: hidden;
 }
 .f1{
   text-align: center;
@@ -284,6 +303,21 @@ nav ul li p {
 .minHeight{
   min-height: calc(100vh - 130px);
 }
+.maxDescriptionHeight{
+  max-height: 100%;
+}
+
+.centerVertically{
+  align-items: center;
+}
+
+.login-box{
+  border-style: solid;
+  width: 250px;
+  border-radius: 1px;
+  margin: 0 auto;
+}
+
 
 
 @media (max-width: 800px) {
@@ -296,6 +330,17 @@ nav ul li p {
     margin-left: 10px!important;
     margin-right: 10px!important;
     width: calc(100vw - 20px)!important;
+  }
+  .cartCard{
+    position: relative;
+    min-width: 0;
+    max-height: 100%!important;
+    word-wrap: break-word;
+    background: #fff;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 0px;
   }
   .flex{
     flex-direction: column;

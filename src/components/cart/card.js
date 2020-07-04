@@ -3,21 +3,18 @@ import { connect } from 'react-redux'
 import Button from 'react-bootstrap/Button'
 
 const Card = (props) => {
-  const [quantity, setQuantity] = useState(1)
 
   const handleQuantity = (operation) => {
-    if(operation === '-' && quantity === 1){
+    if(operation === '-' && props.quantity === 1){
       alert('Item Removed')
       props.removeFromCart(props.info)
+      props.updateQuantities(props.info.ID, 0)
     }
     else if (operation === '-') {
-      setQuantity(quantity-1)
-
-      props.addToCart(props.info.ID, quantity)
+      props.updateQuantities(props.info.ID, props.quantity-1)
     }
     else if(operation === '+'){
-      setQuantity(quantity+1)
-      props.addToCart(props.info.ID, quantity+1)
+      props.updateQuantities(props.info.ID, props.quantity+1)
     }
   }
 
@@ -31,14 +28,18 @@ const Card = (props) => {
           <div className = "maxDescriptionHeight">
             <p>Price: {props.info.NAME}</p>
             <p>Price: {props.info.PRICE}</p>
-            <p>Description: {props.info.DESCRIPTION}</p>
+            <div className = "overflowYAuto">
+              <p>Description: {props.info.DESCRIPTION}</p>
+            </div>
+            <p>Quantity: {props.quantity}</p>
             <div className = "displayInline">
-              <p>Quantity: {quantity}</p>
-              <p><Button variant="outline-danger" onClick = {() => handleQuantity('-') }>-</Button></p>
-              <p><Button variant="outline-primary" onClick = {() => handleQuantity('+') }>+</Button></p>
+              <p><Button variant="outline-danger shadow-none" onClick = {() => handleQuantity('-') }>-</Button></p>
+              <p><Button variant="outline-primary shadow-none" onClick = {() => handleQuantity('+') }>+</Button></p>
             </div>
           </div>
         </div>
+      </div>
+      <div className = "spacing25">
       </div>
     </div>
   )
@@ -52,8 +53,8 @@ const mapDispatchToProps = {
   removeFromCart: data => {
     return { payload: data, type: 'REMOVE_FROM_CART'}
   },
-  addToCart: (id, quantity) => {
-    return { ID: id, quantity: quantity, type: 'HANDLE_QUANTITY'}
+  updateQuantities: (id, quantity) => {
+    return { id: id, quantity: quantity, type: 'UPDATE_QUANTITY'}
   }
 }
 

@@ -20,7 +20,10 @@ const Accessories = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[11].PRICE}</p>
                     <p>Description: {props.products[11].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(11)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(11, 1)
+                      props.addToCart(11)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -37,7 +40,10 @@ const Accessories = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[12].PRICE}</p>
                     <p>Description: {props.products[12].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(12)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(12, 1)
+                      props.addToCart(12)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -54,7 +60,10 @@ const Accessories = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[13].PRICE}</p>
                     <p>Description: {props.products[13].PRICE}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(13)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(13, 1)
+                      props.addToCart(13)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -76,7 +85,10 @@ const Accessories = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[14].PRICE}</p>
                     <p>Description: {props.products[14].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(14)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(14, 1)
+                      props.addToCart(14)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -93,7 +105,10 @@ const Accessories = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[15].PRICE}</p>
                     <p>Description: {props.products[15].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(15)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(15, 1)
+                      props.addToCart(15)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -110,7 +125,10 @@ const Accessories = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[16].PRICE}</p>
                     <p>Description: {props.products[16].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(16)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(16, 1)
+                      props.addToCart(16)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -129,6 +147,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   addToCart: data => {
     return { payload: data, type: 'ADD_TO_CART',}
+  },
+  updateQuantities: (id, quantity) => {
+    return { id: id, quantity: quantity, type: 'UPDATE_QUANTITY'}
   }
 }
 

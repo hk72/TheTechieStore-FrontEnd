@@ -8,6 +8,9 @@ const Navbar = (props) => {
       <nav>
           <ul>
             <li>
+              <p onClick = { () => {history.push('/')}}>Browse</p>
+            </li>
+            <li>
               <p onClick = { () => {history.push('/cart')}}>Cart</p>
             </li>
             <li>

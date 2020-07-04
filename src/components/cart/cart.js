@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
+import Button from 'react-bootstrap/Button'
 import Card from './card'
 
 const Cart = (props) => {
@@ -20,16 +21,19 @@ const Cart = (props) => {
 
   return(
     <div className = "minHeight">
-      {props.cart === null
+      {props.cart[0] === null
         ?
-          <div>
-          <h2> x</h2>
+          <div style = {{paddingTop: "100px"}}>
+            <h2>Cart Empty</h2>
           </div>
         :
         <div>
           <h2 className = "center m-tb50-30" >Cart</h2>
           <div >
-            {props.cart.map(info => <Card  key = {info.ID} info = {info}/>)}
+            {props.cart.map(info => <Card  key = {info.ID} info = {info} quantity = {props.quantity[info.ID]}/>)}
+          </div>
+          <div className = "center displayInline">
+            <p><Button variant="outline-success shadow-none">Checkout</Button></p>
           </div>
         </div>
       }
@@ -38,7 +42,8 @@ const Cart = (props) => {
 }
 
 const mapStateToProps = state => ({
-  cart: state.cart
+  cart: state.cart,
+  quantity: state.quantity
 })
 
 const mapDispatchToProps = {

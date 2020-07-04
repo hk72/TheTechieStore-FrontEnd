@@ -18,6 +18,7 @@ import Watch from './components/watches/watches'
 import Tablet from './components/tablets/tablets'
 import Cart from './components/cart/cart'
 import Account from './components/account/account'
+import Login from './components/account/login'
 
 
 const App = (props) => {
@@ -48,6 +49,7 @@ const App = (props) => {
         <Route exact path = '/tablets' component = {Tablet}/>
         <Route exact path = '/cart' component = {Cart}/>
         <Route exact path = '/account' component = {Account}/>
+        <Route exact path = '/login' component = {Login}/>
       </Router>
       <Footer/>
     </div>

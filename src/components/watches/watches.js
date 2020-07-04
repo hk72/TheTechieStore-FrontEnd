@@ -20,7 +20,10 @@ const SmartWatch = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[30].PRICE}</p>
                     <p>Description: {props.products[30].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(30)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(30, 1)
+                      props.addToCart(30)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -37,7 +40,10 @@ const SmartWatch = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[31].PRICE}</p>
                     <p>Description: {props.products[31].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(31)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(31, 1)
+                      props.addToCart(31)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -59,7 +65,10 @@ const SmartWatch = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[32].PRICE}</p>
                     <p>Description: {props.products[32].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(32)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(32, 1)
+                      props.addToCart(32)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -76,7 +85,10 @@ const SmartWatch = (props) => {
                   <div className = "contents">
                     <p>Cost: {props.products[33].PRICE}</p>
                     <p>Description: {props.products[33].DESCRIPTION}</p>
-                    <p><Button variant="outline-light" onClick = {() => props.addToCart(33)}>Add to Cart</Button></p>
+                    <p><Button variant="outline-light shadow-none" onClick = {() =>{
+                      props.updateQuantities(33, 1)
+                      props.addToCart(33)
+                    }}>Add to Cart</Button></p>
                   </div>
                 </div>
               </div>
@@ -95,6 +107,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   addToCart: data => {
     return { payload: data, type: 'ADD_TO_CART',}
+  },
+  updateQuantities: (id, quantity) => {
+    return { id: id, quantity: quantity, type: 'UPDATE_QUANTITY'}
   }
 }
 
