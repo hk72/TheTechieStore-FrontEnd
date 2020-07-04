@@ -19,7 +19,7 @@ import Tablet from './components/tablets/tablets'
 import Cart from './components/cart/cart'
 import Account from './components/account/account'
 import Login from './components/account/login'
-
+import Signup from './components/account/signup'
 
 const App = (props) => {
 
@@ -50,6 +50,7 @@ const App = (props) => {
         <Route exact path = '/cart' component = {Cart}/>
         <Route exact path = '/account' component = {Account}/>
         <Route exact path = '/login' component = {Login}/>
+        <Route exact path = '/signup' component = {Signup}/>
       </Router>
       <Footer/>
     </div>

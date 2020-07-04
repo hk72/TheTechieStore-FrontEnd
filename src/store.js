@@ -71,7 +71,15 @@ const reducer = ( state, action ) => {
         ...state,
         cart: action.payload
       }
-      console.log(state.cart)
+      console.log(action.payload)
+      if(state.cart.length>Object.keys(state.quantity).length){
+        state.cart.forEach((i) => {
+          state = {
+            ...state,
+            quantity: {...state.quantity, [i.ID] : 1}
+          }
+        })
+      }
     break
     case 'REMOVE_FROM_CART':
       state = {
@@ -97,8 +105,6 @@ const reducer = ( state, action ) => {
           ...state,
           quantity: {...state.quantity, [action.id]: action.quantity}
         }
-      console.log("state", state.quantity)
-
     break
   }
 
