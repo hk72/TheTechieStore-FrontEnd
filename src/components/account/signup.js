@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { connect } from 'react-redux'
 import history from '../../history'
 
 const Signup = (props) => {
@@ -52,6 +53,7 @@ const Signup = (props) => {
             .then(res => res.json())
             .then(res => {
               if(res.message === 'Auth Successful'){
+                props.setLoggedIn('true')
                 history.push('/account')
               }
               else{
@@ -104,4 +106,10 @@ const Signup = (props) => {
   )
 }
 
-export default Signup
+const mapDispatchToProps = {
+  setLoggedIn: data => {
+    return { payload: data, type: 'SET_LOGGED_IN',}
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Signup)

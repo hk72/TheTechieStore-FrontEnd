@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import { connect } from 'react-redux'
 import history from '../../history'
 
 const Account = (props) => {
@@ -9,19 +10,29 @@ const Account = (props) => {
   const [username, setUsername] = useState('')
 
   useEffect(() => {
+    console.log("wut")
     fetch('http://localhost:5000/api/user/profile', {
       method: 'GET',
       credentials: 'include'
     })
     .then(res => res.json())
     .then(res => {
-      if(res.message === "Auth Failed"){
-        history.push('/login')
-      }
-      else{
+      console.log(res)
+      if(res.message === "Successful"){
         setUsername(res.username)
       }
+      else if(res.message === "Internal Server Error"){
+        alert('An Error has Occured. Please Try Again.')
+      }
+      else if(res.message === "Auth Failed"){
+        props.setLoggedIn('false')
+        history.push('/login')
+      }
     })
+    .catch(err => {
+      alert('An Error has Occured. Please Try Again.')
+    })
+
   },[])
 
   const handleUsername = (e) => {
@@ -50,6 +61,10 @@ const Account = (props) => {
         }
         else if(res.message === "Username Exists"){
           setUsernameErrors(["Username Exists"])
+        }
+        else if(res.message === "Auth Failed"){
+          props.setLoggedIn('false')
+          history.push('/login')
         }
         else{
           setUsername(username)
@@ -95,6 +110,10 @@ const Account = (props) => {
           else if(res.message === "Internal Server Error"){
             setPasswordErrors(['Internal Server Error'])
           }
+          else if(res.message === "Auth Failed"){
+            props.setLoggedIn('false')
+            history.push('/login')
+          }
           else{
             alert('Password Updated')
             setPasswordErrors([])
@@ -119,13 +138,18 @@ const Account = (props) => {
     })})
     .then(res => res.json())
     .then(res => {
-      if(res.message === "Auth Failed"){
+      if(res.message === "Check Password"){
         setDeletionErrors(['Ensure Current Password is Correct'])
+      }
+      else if(res.message === "Auth Failed"){
+        props.setLoggedIn('false')
+        history.push('/login')
       }
       else if(res.message === "Internal Server Error"){
         setDeletionErrors(['Internal Server Error'])
       }
       else{
+        props.setLoggedIn('false')
         setDeletionErrors([])
         history.push('/')
       }
@@ -230,4 +254,10 @@ const Account = (props) => {
   )
 }
 
-export default Account
+const mapDispatchToProps = {
+  setLoggedIn: data => {
+    return { payload: data, type: 'SET_LOGGED_IN',}
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Account)

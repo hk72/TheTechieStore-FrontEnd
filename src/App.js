@@ -24,9 +24,13 @@ import Signup from './components/account/signup'
 const App = (props) => {
 
   useEffect(() => {
+
     fetch("http://localhost:5000/api/product")
     .then(res => res.json())
     .then(res => props.getProducts(res.products))
+
+    props.matchIsLoggedIn(localStorage.isLoggedIn)
+
   },[])
 
   return (
@@ -59,7 +63,10 @@ const App = (props) => {
 
 const mapDispatchToProps = {
   getProducts: data => {
-    return { payload: data, type: 'GET_PRODUCTS',}
+    return { payload: data, type: 'GET_PRODUCTS'}
+  },
+  matchIsLoggedIn: data => {
+    return { payload: data, type: 'MATCH_IS_LOGGED_IN'}
   }
 }
 

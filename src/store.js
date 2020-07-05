@@ -43,7 +43,8 @@ const initialState = {
               "38":{}
             },
   cart: [null],
-  quantity: {}
+  quantity: {},
+  isLoggedIn: false
 }
 
 const reducer = ( state, action ) => {
@@ -71,15 +72,24 @@ const reducer = ( state, action ) => {
         ...state,
         cart: action.payload
       }
-      console.log(action.payload)
       if(state.cart.length>Object.keys(state.quantity).length){
         state.cart.forEach((i) => {
-          state = {
-            ...state,
-            quantity: {...state.quantity, [i.ID] : 1}
+          if(i !== null){
+            state = {
+              ...state,
+              quantity: {...state.quantity, [i.ID] : 1}
+            }
           }
         })
       }
+    break
+    case 'CLEAR_CART':
+      state = {
+        ...state,
+        cart: [null],
+        quantity: {}
+      }
+      localStorage.shopping_cart = ''
     break
     case 'REMOVE_FROM_CART':
       state = {
@@ -105,6 +115,43 @@ const reducer = ( state, action ) => {
           ...state,
           quantity: {...state.quantity, [action.id]: action.quantity}
         }
+    break
+    case 'SET_LOGGED_IN':
+    if(localStorage.isLoggedIn === undefined){
+      localStorage.setItem('isLoggedIn', 'false')
+    }
+    if(action.payload === 'true'){
+      localStorage.isLoggedIn = 'true'
+      state = {
+        ...state,
+        isLoggedIn: true
+      }
+    }
+    else if(action.payload === 'false'){
+      localStorage.isLoggedIn = 'false'
+      state = {
+        ...state,
+        isLoggedIn: false
+      }
+    }
+    break
+    case 'MATCH_IS_LOGGED_IN':
+      if(localStorage.isLoggedIn === undefined){
+        localStorage.setItem('isLoggedIn', 'false')
+      }
+      if(action.payload === 'true'){
+        state = {
+          ...state,
+          isLoggedIn: true
+        }
+      }
+      else if(action.payload === 'false'){
+        state = {
+          ...state,
+          isLoggedIn: false
+        }
+      }
+
     break
   }
 
