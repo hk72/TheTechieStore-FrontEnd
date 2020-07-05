@@ -341,6 +341,18 @@ nav ul li p {
   color: #606060;
 }
 
+.inputStyleMax{
+  width: 95%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+  outline: none;
+  height: 30px;
+  font-size: 16px;
+  opacity: 1;
+  color: #606060;
+}
+
 .submitStyle{
   width: 80%;
   border: none;
@@ -353,7 +365,24 @@ nav ul li p {
   border-radius: 5px;
 }
 
+.submitStyleMax{
+  width: 95%;
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #343434;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
 .submitStyle:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.submitStyleMax:focus {
   outline: none;
   box-shadow: none;
 }
@@ -393,6 +422,23 @@ nav ul li p {
 .liText{
   text-align: left;
   color: #CA0909;
+}
+
+.accountCard{
+  margin: 0 auto;
+  margin-bottom: 25px;
+  width: 85%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.accountCard h2{
+  margin: 0;
+  padding-left: 10px;
+}
+
+.center{
+  align-items: center;
 }
 
 @media (max-width: 800px) {

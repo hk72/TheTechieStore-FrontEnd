@@ -6,11 +6,15 @@ const Login = (props) => {
   const [errors, setErrors] = useState([])
 
   const handleLogin = (e) => {
+
     const username = e.target['username'].value
     const password = e.target['password'].value
+
     e.preventDefault()
+
     fetch('http://localhost:5000/api/user/login',{
       method: 'POST',
+      credentials: 'include',
       headers:{
         'Content-Type':'application/json'
       },
@@ -24,7 +28,7 @@ const Login = (props) => {
           history.push('/account')
         }
         else{
-          setErrors(['Auth Failed.'])
+          setErrors(['Username or Password Incorrect.'])
         }
       })
   }
@@ -45,7 +49,7 @@ const Login = (props) => {
                         {return <li key = {index} className = "liText">{err}</li>}
                       })}
                     </ul>
-                </div>`
+                </div>
               </div>
             :
             null

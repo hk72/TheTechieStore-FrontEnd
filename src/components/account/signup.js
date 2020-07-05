@@ -6,9 +6,12 @@ const Signup = (props) => {
   const [errors, setErrors] = useState([])
 
   const handleSignup = (e) => {
+
     const username = e.target['username'].value
     const password = e.target['password'].value
+
     e.preventDefault()
+
     if(e.target['password'].value !== e.target['re-password'].value){
       setErrors(['Make Sure Passwords Match'])
     }
@@ -38,6 +41,7 @@ const Signup = (props) => {
         else{
           fetch('http://localhost:5000/api/user/login',{
             method: 'POST',
+            credentials: 'include',
             headers:{
               'Content-Type':'application/json'
             },
