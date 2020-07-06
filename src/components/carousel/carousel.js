@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import Carousel from 'react-bootstrap/Carousel'
-import './carousel.css'
+import Button from 'react-bootstrap/Button'
+import history from '../../history'
 
 const CarouselItem = (props) =>  {
   const [index, setIndex] = useState(0);
@@ -10,42 +11,49 @@ const CarouselItem = (props) =>  {
   };
   return(
     <div>
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel activeIndex={index} onSelect={handleSelect} interval = {3000}>
       <Carousel.Item>
         <img
-          className="d-block w-100 maxHeight"
+          className="d-block w-100 maxHeightC"
           src="laptop.jpg"
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Laptops</h3>
+          <Button variant="outline-light" onClick = {() => {
+            history.push('/laptops')
+            window.scrollTo(0, 0)
+          }}>View Collection</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 maxHeight"
+          className="d-block w-100 maxHeightC"
           src="phone.jpg"
           alt="Second slide"
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Phones</h3>
+          <Button variant="outline-light" onClick = {() => {
+            history.push('/phones')
+            window.scrollTo(0, 0)
+          }}>View Collection</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 maxHeight"
+          className="d-block w-100 maxHeightC"
           src="headphones.jpg"
           alt="Third slide"
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h3>Headphones</h3>
+          <Button variant="outline-light" onClick = {() => {
+            history.push('/headphones')
+            window.scrollTo(0, 0)
+          }}>View Collection</Button>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
