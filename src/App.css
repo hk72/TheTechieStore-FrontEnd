@@ -221,6 +221,8 @@ nav ul li p {
   top: 40%;
   left: 3%;
   cursor: pointer;
+  font-size: 125%;
+  color: #474747;
 }
 
 .z-dex{
@@ -293,6 +295,7 @@ nav ul li p {
 
 .contents p{
   margin-top: 5px;
+  margin-bottom: 5px;
   padding: 0;
 }
 

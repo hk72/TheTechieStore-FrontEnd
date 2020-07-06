@@ -7,17 +7,16 @@ const Computer = (props) => {
   return(
     <div className = "minHeight">
       <h2 className = "center m-tb50-30" >Apple</h2>
-      <div className = "section2">
+      <div style = {{paddingBottom: "50px"}} className = "section2">
         <div className = "flex">
           <div className = "f2">
             <div className = "card2 minImageHeight">
               <div className = "imageExpand rounded">
                 <img src = {props.products[9].IMAGE} alt = "Computer" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>{props.products[9].NAME}</p>
-                </div>
                 <div className = "details">
                   <div className = "contents">
+                    <p style = {{fontSize: "125%"}}>{props.products[9].NAME}</p>
+                    <hr style = {{marginTop: "0rem", borderTop: "1px solid white"}}></hr>
                     <p>Cost: {props.products[9].PRICE}</p>
                     <p>Description: {props.products[9].DESCRIPTION}</p>
                     <p><Button variant="outline-light shadow-none" onClick = {() =>{
@@ -33,11 +32,10 @@ const Computer = (props) => {
             <div className = "card2 minImageHeight">
               <div className = "imageExpand rounded">
                 <img src = {props.products[10].IMAGE} alt = "Computer" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>{props.products[10].NAME}</p>
-                </div>
                 <div className = "details">
                   <div className = "contents">
+                    <p style = {{fontSize: "125%"}}>{props.products[10].NAME}</p>
+                    <hr style = {{marginTop: "0rem", borderTop: "1px solid white"}}></hr>
                     <p>Cost: {props.products[10].PRICE}</p>
                     <p>Description: {props.products[10].DESCRIPTION}</p>
                     <p><Button variant="outline-light shadow-none" onClick = {() =>{

@@ -88,7 +88,7 @@ const Browse = (props) => {
         </div>
       </div>
       <h2 className = "center m-tb50-30" >Electronics</h2>
-      <div className = "section">
+      <div style = {{paddingBottom: "50px"}} className = "section">
         <div className = "flex">
           <div className = "f3">
             <div className = "card3" onClick = { () => {

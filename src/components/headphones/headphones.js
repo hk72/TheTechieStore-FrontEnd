@@ -13,11 +13,10 @@ const Headphone = (props) => {
             <div className = "card3 minImageHeight">
               <div className = "imageExpand rounded">
                 <img src = {props.products[25].IMAGE} alt = "Headphones" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>{props.products[25].NAME}</p>
-                </div>
                 <div className = "details">
                   <div className = "contents">
+                    <p style = {{fontSize: "125%"}}>{props.products[25].NAME}</p>
+                    <hr style = {{marginTop: "0rem", borderTop: "1px solid white"}}></hr>
                     <p>Cost: {props.products[25].PRICE}</p>
                     <p>Description: {props.products[25].DESCRIPTION}</p>
                     <p><Button variant="outline-light shadow-none" onClick = {() =>{
@@ -33,11 +32,10 @@ const Headphone = (props) => {
             <div className = "card3 minImageHeight">
               <div className = "imageExpand rounded">
                 <img src = {props.products[26].IMAGE} alt = "Headphones" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>{props.products[26].NAME}</p>
-                </div>
                 <div className = "details">
                   <div className = "contents">
+                    <p style = {{fontSize: "125%"}}>{props.products[26].NAME}</p>
+                    <hr style = {{marginTop: "0rem", borderTop: "1px solid white"}}></hr>
                     <p>Cost: {props.products[26].PRICE}</p>
                     <p>Description: {props.products[26].DESCRIPTION}</p>
                     <p><Button variant="outline-light shadow-none" onClick = {() =>{
@@ -53,11 +51,10 @@ const Headphone = (props) => {
             <div className = "card3 minImageHeight">
               <div className = "imageExpand rounded">
                 <img src = {props.products[27].IMAGE} alt = "Headphones" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>{props.products[27].NAME}</p>
-                </div>
                 <div className = "details">
                   <div className = "contents">
+                    <p style = {{fontSize: "125%"}}>{props.products[27].NAME}</p>
+                    <hr style = {{marginTop: "0rem", borderTop: "1px solid white"}}></hr>
                     <p>Cost: {props.products[27].PRICE}</p>
                     <p>Description: {props.products[27].DESCRIPTION}</p>
                     <p><Button variant="outline-light shadow-none" onClick = {() =>{
@@ -72,17 +69,16 @@ const Headphone = (props) => {
         </div>
       </div>
     <h2 className = "center m-tb50-30" >In Ear</h2>
-    <div className = "section2">
+    <div style = {{paddingBottom: "50px"}} className = "section2">
       <div className = "flex">
         <div className = "f2">
           <div className = "card2 minImageHeight">
             <div className = "imageExpand rounded">
               <img src = {props.products[28].IMAGE} alt = "Headphones" className = "w-100"/>
-              <div className = "cText wbg">
-                <p>{props.products[28].NAME}</p>
-              </div>
               <div className = "details">
                 <div className = "contents">
+                  <p style = {{fontSize: "125%"}}>{props.products[28].NAME}</p>
+                  <hr style = {{marginTop: "0rem", borderTop: "1px solid white"}}></hr>
                   <p>Cost: {props.products[28].PRICE}</p>
                   <p>Description: {props.products[28].DESCRIPTION}</p>
                   <p><Button variant="outline-light shadow-none" onClick = {() =>{
@@ -98,11 +94,10 @@ const Headphone = (props) => {
           <div className = "card2 minImageHeight">
             <div className = "imageExpand rounded">
               <img src = {props.products[29].IMAGE} alt = "Headphones" className = "w-100"/>
-              <div className = "cText wbg">
-                <p>{props.products[29].NAME}</p>
-              </div>
               <div className = "details">
                 <div className = "contents">
+                  <p style = {{fontSize: "125%"}}>{props.products[29].NAME}</p>
+                  <hr style = {{marginTop: "0rem", borderTop: "1px solid white"}}></hr>
                   <p>Cost: {props.products[29].PRICE}</p>
                   <p>Description: {props.products[29].DESCRIPTION}</p>
                   <p><Button variant="outline-light shadow-none" onClick = {() =>{

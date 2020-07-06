@@ -13,11 +13,10 @@ const Laptop = (props) => {
             <div className = "card3 minImageHeight">
               <div className = "imageExpand rounded">
                 <img  src = {props.products[1].IMAGE} alt = "Laptop" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>{props.products[1].NAME}</p>
-                </div>
                 <div className = "details">
                   <div className = "contents">
+                    <p style = {{fontSize: "125%"}}>{props.products[1].NAME}</p>
+                    <hr style = {{marginTop: "0rem", borderTop: "1px solid white"}}></hr>
                     <p>Cost: {props.products[1].PRICE}</p>
                     <p>Description: {props.products[1].DESCRIPTION}</p>
                     <p><Button variant="outline-light shadow-none" onClick = {() =>{
@@ -33,11 +32,10 @@ const Laptop = (props) => {
             <div className = "card3 minImageHeight">
               <div className = "imageExpand rounded">
                 <img src = {props.products[2].IMAGE} alt = "Laptop" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>{props.products[2].NAME}</p>
-                </div>
                 <div className = "details">
                   <div className = "contents">
+                    <p style = {{fontSize: "125%"}}>{props.products[2].NAME}</p>
+                    <hr style = {{marginTop: "0rem", borderTop: "1px solid white"}}></hr>
                     <p>Cost: {props.products[2].PRICE}</p>
                     <p>Description: {props.products[2].DESCRIPTION}</p>
                     <p><Button variant="outline-light shadow-none" onClick = {() =>{
@@ -53,11 +51,10 @@ const Laptop = (props) => {
             <div className = "card3 minImageHeight">
               <div className = "imageExpand rounded">
                 <img src = {props.products[3].IMAGE} alt = "Laptop" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>{props.products[3].NAME}</p>
-                </div>
                 <div className = "details">
                   <div className = "contents">
+                    <p style = {{fontSize: "125%"}}>{props.products[3].NAME}</p>
+                    <hr style = {{marginTop: "0rem", borderTop: "1px solid white"}}></hr>
                     <p>Cost: {props.products[3].PRICE}</p>
                     <p>Description: {props.products[3].DESCRIPTION}</p>
                     <p><Button variant="outline-light shadow-none" onClick = {() =>{
@@ -78,11 +75,10 @@ const Laptop = (props) => {
             <div className = "card2 minImageHeight">
               <div className = "imageExpand rounded">
                 <img src = {props.products[4].IMAGE} alt = "Laptop" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>{props.products[4].NAME}</p>
-                </div>
                 <div className = "details">
                   <div className = "contents">
+                    <p style = {{fontSize: "125%"}}>{props.products[4].NAME}</p>
+                    <hr style = {{marginTop: "0rem", borderTop: "1px solid white"}}></hr>
                     <p>Cost: {props.products[4].PRICE}</p>
                     <p>Description: {props.products[4].DESCRIPTION}</p>
                     <p><Button variant="outline-light shadow-none" onClick = {() =>{
@@ -98,11 +94,10 @@ const Laptop = (props) => {
             <div className = "card2 minImageHeight">
               <div className = "imageExpand rounded">
                 <img src = {props.products[5].IMAGE} alt = "Laptop" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>{props.products[5].NAME}</p>
-                </div>
                 <div className = "details">
                   <div className = "contents">
+                    <p style = {{fontSize: "125%"}}>{props.products[5].NAME}</p>
+                    <hr style = {{marginTop: "0rem", borderTop: "1px solid white"}}></hr>
                     <p>Cost: {props.products[5].PRICE}</p>
                     <p>Description: {props.products[5].DESCRIPTION}</p>
                     <p><Button variant="outline-light shadow-none" onClick = {() =>{
@@ -117,17 +112,16 @@ const Laptop = (props) => {
         </div>
       </div>
       <h2 className = "center m-tb50-30" >HP</h2>
-      <div className = "section3">
+      <div style = {{paddingBottom: "50px"}} className = "section3">
         <div className = "flex">
           <div className = "f3">
             <div className = "card3 minImageHeight">
               <div className = "imageExpand rounded">
                 <img src = {props.products[6].IMAGE} alt = "Laptop" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>{props.products[6].NAME}</p>
-                </div>
                 <div className = "details">
                   <div className = "contents">
+                    <p style = {{fontSize: "125%"}}>{props.products[6].NAME}</p>
+                    <hr style = {{marginTop: "0rem", borderTop: "1px solid white"}}></hr>
                     <p>Cost: {props.products[6].PRICE}</p>
                     <p>Description: {props.products[6].DESCRIPTION}</p>
                     <p><Button variant="outline-light shadow-none" onClick = {() =>{
@@ -143,11 +137,10 @@ const Laptop = (props) => {
             <div className = "card3 minImageHeight">
               <div className = "imageExpand rounded">
                 <img src = {props.products[7].IMAGE} alt = "Laptop" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>{props.products[7].NAME}</p>
-                </div>
                 <div className = "details">
                   <div className = "contents">
+                    <p style = {{fontSize: "125%"}}>{props.products[7].NAME}</p>
+                    <hr style = {{marginTop: "0rem", borderTop: "1px solid white"}}></hr>
                     <p>Cost: {props.products[7].PRICE}</p>
                     <p>Description: {props.products[7].DESCRIPTION}</p>
                     <p><Button variant="outline-light shadow-none" onClick = {() =>{
@@ -163,11 +156,10 @@ const Laptop = (props) => {
             <div className = "card3 minImageHeight">
               <div className = "imageExpand rounded">
                 <img src = {props.products[8].IMAGE} alt = "Laptop" className = "w-100"/>
-                <div className = "cText wbg">
-                  <p>{props.products[8].NAME}</p>
-                </div>
                 <div className = "details">
                   <div className = "contents">
+                    <p style = {{fontSize: "125%"}}>{props.products[8].NAME}</p>
+                    <hr style = {{marginTop: "0rem", borderTop: "1px solid white"}}></hr>
                     <p>Cost: {props.products[8].IMAGE}</p>
                     <p>Description: {props.products[8].DESCRIPTION}</p>
                     <p><Button variant="outline-light shadow-none" onClick = {() =>{

@@ -22,7 +22,7 @@ const Card = (props) => {
     <div className = "section2">
       <div className = "cartCard flex">
         <div className = "f25 maxWidth33">
-          <img src = "tabletCover.jpg" alt = "as"/>
+          <img src = {props.info.IMAGE} alt = "as"/>
         </div>
         <div className = "f75">
           <div className = "maxDescriptionHeight">
