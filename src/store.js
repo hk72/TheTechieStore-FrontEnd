@@ -68,9 +68,19 @@ const reducer = ( state, action ) => {
       }
     break
     case 'GET_CART':
-      state = {
-        ...state,
-        cart: action.payload
+      if(localStorage.shopping_cart === undefined){
+        localStorage.setItem('shopping_cart', '')
+      }
+      if(action.payload === undefined) {
+        state = {
+          ...state,
+          cart: [null]
+        }
+      }else{
+        state = {
+          ...state,
+          cart: action.payload
+        }
       }
       if(state.cart.length>Object.keys(state.quantity).length){
         state.cart.forEach((i) => {

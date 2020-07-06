@@ -10,7 +10,6 @@ const Account = (props) => {
   const [username, setUsername] = useState('')
 
   useEffect(() => {
-    console.log("wut")
     fetch('http://localhost:5000/api/user/profile', {
       method: 'GET',
       credentials: 'include'
@@ -38,7 +37,7 @@ const Account = (props) => {
   const handleUsername = (e) => {
     e.preventDefault()
 
-    const username = e.target['username'].value
+    const username = e.target['username'].value.toString()
 
     e.target['username'].value = ''
 
@@ -77,9 +76,9 @@ const Account = (props) => {
   const handlePassword = (e) => {
     e.preventDefault()
 
-    const currentPassword = e.target['currentPassword'].value
-    const newPassword = e.target['newPassword'].value
-    const reNewPassword = e.target['reNewPassword'].value
+    const currentPassword = e.target['currentPassword'].value.toString()
+    const newPassword = e.target['newPassword'].value.toString()
+    const reNewPassword = e.target['reNewPassword'].value.toString()
 
     if(e.target['newPassword'].value !== e.target['reNewPassword'].value){
       setPasswordErrors(['Make Sure New Passwords Match'])
@@ -125,7 +124,7 @@ const Account = (props) => {
   const handleDeletion = (e) => {
     e.preventDefault()
 
-    const password =  e.target['password'].value
+    const password =  e.target['password'].value.toString()
 
     fetch('http://localhost:5000/api/user/delete', {
       method: 'DELETE',

@@ -20,6 +20,7 @@ import Cart from './components/cart/cart'
 import Account from './components/account/account'
 import Login from './components/account/login'
 import Signup from './components/account/signup'
+import About from './components/about/about'
 
 const App = (props) => {
 
@@ -55,6 +56,7 @@ const App = (props) => {
         <Route exact path = '/account' component = {Account}/>
         <Route exact path = '/login' component = {Login}/>
         <Route exact path = '/signup' component = {Signup}/>
+        <Route exact path = '/about' component = {About}/>
       </Router>
       <Footer/>
     </div>

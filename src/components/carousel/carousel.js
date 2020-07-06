@@ -14,7 +14,7 @@ const CarouselItem = (props) =>  {
     <Carousel activeIndex={index} onSelect={handleSelect} interval = {3000}>
       <Carousel.Item>
         <img
-          className="d-block w-100 maxHeight"
+          className="d-block w-100 maxHeightC"
           src="laptop.jpg"
           alt="First slide"
         />
@@ -28,7 +28,7 @@ const CarouselItem = (props) =>  {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 maxHeight"
+          className="d-block w-100 maxHeightC"
           src="phone.jpg"
           alt="Second slide"
         />
@@ -43,7 +43,7 @@ const CarouselItem = (props) =>  {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 maxHeight"
+          className="d-block w-100 maxHeightC"
           src="headphones.jpg"
           alt="Third slide"
         />

@@ -20,36 +20,30 @@ const Navbar = (props) => {
   }
 
   return(
-    <div>
-    {console.log(props.isLoggedIn)}
-      <nav>
-          <ul>
-            <li>
-              <p onClick = { () => {history.push('/')}}>Browse</p>
-            </li>
-            <li>
-              <p onClick = { () => {history.push('/cart')}}>Cart</p>
-            </li>
-              {
-                props.isLoggedIn
-                ?
-                  <li>
-                    <p onClick = { () => {history.push('/account')}}>Account</p>
-                  </li>
-                :
-                  null
-              }
-            <li>
-              {
-                props.isLoggedIn
-                ?
-                  <p onClick = { () => handleLogout()}>Logout</p>
-                :
-                  <p onClick = { () => {history.push('/login')}}>Login</p>
-              }
-            </li>
-          </ul>
-        </nav>
+    <div className = "navbar1">
+      <div className = "w50">
+        <div className = 'logoNav'>
+          <img onClick = { () => {history.push('/about')}} src = 'TheTechie.jpg' alt = 'img' ALIGN = 'left'/>
+        </div>
+      </div>
+      <div className = 'w50 endContent'>
+        <p onClick = { () => {history.push('/')}}>Browse</p>
+        <p onClick = { () => {history.push('/cart')}}>Cart</p>
+        {
+          props.isLoggedIn
+          ?
+            <p onClick = { () => {history.push('/account')}}>Account</p>
+          :
+            null
+        }
+        {
+          props.isLoggedIn
+          ?
+            <p onClick = { () => handleLogout()}>Logout</p>
+          :
+            <p onClick = { () => {history.push('/login')}}>Login</p>
+        }
+      </div>
     </div>
   )
 }

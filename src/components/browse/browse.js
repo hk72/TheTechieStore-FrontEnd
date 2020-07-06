@@ -12,7 +12,7 @@ const Browse = (props) => {
 
   return(
     <div className = "minHeight">
-      <h2 className = "center m-tb50-30" >Computers</h2>
+      <h2 className = "center browseTitleTop" >Computers</h2>
         <div className = "section3">
           <div className = "flex">
             <div className = "f3">
