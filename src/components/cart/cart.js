@@ -33,7 +33,6 @@ const Cart = (props) => {
       })
       .then(res => res.json())
       .then(res => {
-        console.log(res)
         if(res.message === "Auth Failed"){
           history.push('/login')
         }

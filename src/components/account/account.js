@@ -16,7 +16,6 @@ const Account = (props) => {
     })
     .then(res => res.json())
     .then(res => {
-      console.log(res)
       if(res.message === "Successful"){
         setUsername(res.username)
       }
