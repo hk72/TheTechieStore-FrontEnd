@@ -30,6 +30,7 @@ const App = (props) => {
     .then(res => res.json())
     .then(res => props.getProducts(res.products))
     .catch(err => {
+      alert(err)
       alert('An Error Has Occured. Please Try Again.')
     })
 
