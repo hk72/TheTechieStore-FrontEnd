@@ -34,6 +34,9 @@ const Login = (props) => {
           setErrors(['Username or Password Incorrect.'])
         }
       })
+      .catch(err => {
+        alert('An Error Has Occured. Please Try Again.')
+      })
   }
 
   return(

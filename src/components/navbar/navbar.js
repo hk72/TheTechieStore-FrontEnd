@@ -17,6 +17,9 @@ const Navbar = (props) => {
         props.setLoggedIn('false')
       }
     })
+    .catch(err => {
+      alert('An Error Has Occured. Please Try Again.')
+    })
   }
 
   return(

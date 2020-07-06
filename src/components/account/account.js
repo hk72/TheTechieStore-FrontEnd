@@ -29,9 +29,8 @@ const Account = (props) => {
       }
     })
     .catch(err => {
-      alert('An Error has Occured. Please Try Again.')
+      alert('An Error Has Occured. Please Try Again.')
     })
-
   },[])
 
   const handleUsername = (e) => {
@@ -70,6 +69,9 @@ const Account = (props) => {
           alert('Username Updated')
           setUsernameErrors([])
         }
+      })
+      .catch(err => {
+        alert('An Error Has Occured. Please Try Again.')
       })
   }
 
@@ -118,6 +120,9 @@ const Account = (props) => {
             setPasswordErrors([])
           }
         })
+        .catch(err => {
+          alert('An Error Has Occured. Please Try Again.')
+        })
     }
   }
 
@@ -152,6 +157,9 @@ const Account = (props) => {
         setDeletionErrors([])
         history.push('/')
       }
+    })
+    .catch(err => {
+      alert('An Error Has Occured. Please Try Again.')
     })
   }
 

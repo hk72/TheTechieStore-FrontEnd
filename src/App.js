@@ -29,6 +29,9 @@ const App = (props) => {
     fetch("http://localhost:5000/api/product")
     .then(res => res.json())
     .then(res => props.getProducts(res.products))
+    .catch(err => {
+      alert('An Error Has Occured. Please Try Again.')
+    })
 
     props.matchIsLoggedIn(localStorage.isLoggedIn)
 

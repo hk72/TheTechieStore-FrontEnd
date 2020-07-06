@@ -18,6 +18,9 @@ const Cart = (props) => {
       .then(payload => {
         props.getCart(payload.objects)
     })
+    .catch(err => {
+      alert('An Error Has Occured. Please Try Again.')
+    })
   },[])
 
   const handleCheckout = () => {
