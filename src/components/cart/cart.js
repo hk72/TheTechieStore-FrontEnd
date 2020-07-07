@@ -21,7 +21,7 @@ const Cart = (props) => {
     .catch(err => {
       alert('An Error Has Occured. Please Try Again.')
     })
-  },[])
+  })
 
   const handleCheckout = () => {
     fetch('http://localhost:5000/api/user/checkout',{

@@ -52,7 +52,7 @@ const Login = (props) => {
                   <h3>Errors</h3>
                     <ul>
                       {errors.map((err, index) => {
-                        {return <li key = {index} className = "liText">{err}</li>}
+                        return <li key = {index} className = "liText">{err}</li>
                       })}
                     </ul>
                 </div>

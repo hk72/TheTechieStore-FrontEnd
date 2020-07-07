@@ -26,7 +26,7 @@ const App = (props) => {
 
   useEffect(() => {
 
-    fetch("https://git.heroku.com/thetechiestore.git/api/product")
+    fetch("http://localhost:5000/api/product")
     .then(res => res.json())
     .then(res => props.getProducts(res.products))
     .catch(err => {
@@ -35,7 +35,7 @@ const App = (props) => {
 
     props.matchIsLoggedIn(localStorage.isLoggedIn)
 
-  },[])
+  })
 
   return (
     <div>

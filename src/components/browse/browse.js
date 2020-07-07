@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import Button from 'react-bootstrap/Button'
 import history from '../../history'
 
 const Browse = (props) => {
@@ -21,7 +20,7 @@ const Browse = (props) => {
                 window.scrollTo(0, 0)
                }}>
                 <div className = "imageSlide rounded">
-                  <img src = "laptopsCover.jpg" className = "w-100"/>
+                  <img src = "laptopsCover.jpg" alt = 'Laptop' className = "w-100"/>
                   <div className = "cText">
                     <p>Laptops</p>
                   </div>
@@ -34,7 +33,7 @@ const Browse = (props) => {
                 window.scrollTo(0, 0)
               }}>
                 <div className = "imageSlide rounded">
-                  <img src = "computersCover.jpg" className = "w-100"/>
+                  <img src = "computersCover.jpg" alt = 'Computer' className = "w-100"/>
                   <div className = "cText wbg">
                     <p>Computers</p>
                   </div>
@@ -47,7 +46,7 @@ const Browse = (props) => {
                 window.scrollTo(0, 0)
               }}>
                 <div className = "imageSlide rounded">
-                  <img src = "accesoriesCover.jpg" className = "w-100"/>
+                  <img src = "accesoriesCover.jpg" alt = 'Accessories' className = "w-100"/>
                   <div className = "cText">
                     <p>Accessories</p>
                   </div>
@@ -65,7 +64,7 @@ const Browse = (props) => {
               window.scrollTo(0, 0)
             }}>
               <div className = "imageSlide rounded">
-                <img src = "phoneCover.jpg" className = "w-100"/>
+                <img src = "phoneCover.jpg" alt = 'Phone' className = "w-100"/>
                 <div className = "cText">
                   <p>Phones</p>
                 </div>
@@ -78,7 +77,7 @@ const Browse = (props) => {
               window.scrollTo(0, 0)
             }}>
               <div className = "imageSlide rounded">
-                <img src = "tabletCover.jpg" className = "w-100"/>
+                <img src = "tabletCover.jpg" alt = 'Tablet' className = "w-100"/>
                 <div className = "cText">
                   <p>Tablets</p>
                 </div>
@@ -96,7 +95,7 @@ const Browse = (props) => {
               window.scrollTo(0, 0)
             }}>
               <div className = "imageSlide rounded">
-                <img src = "headphonesCover.jpg" className = "w-100"/>
+                <img src = "headphonesCover.jpg" alt = 'Headphones' className = "w-100"/>
                 <div className = "cText">
                   <p>Headphones</p>
                 </div>
@@ -109,7 +108,7 @@ const Browse = (props) => {
               window.scrollTo(0, 0)
             }}>
               <div className = "imageSlide rounded">
-                <img src = "watchCover.jpg" className = "w-100"/>
+                <img src = "watchCover.jpg" alt = 'Watch' className = "w-100"/>
                 <div className = "cText">
                   <p>Watch</p>
                 </div>
@@ -122,7 +121,7 @@ const Browse = (props) => {
               window.scrollTo(0, 0)
             }}>
               <div className = "imageSlide rounded">
-                <img src = "smarthomeCover.jpg" className = "w-100"/>
+                <img src = "smarthomeCover.jpg" alt = 'SmartHome' className = "w-100"/>
                 <div className = "cText">
                   <p>Smart Home</p>
                 </div>

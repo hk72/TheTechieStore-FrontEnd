@@ -26,7 +26,7 @@ const Navbar = (props) => {
     <div className = "navbar1">
       <div className = "w50">
         <div className = 'logoNav'>
-          <img onClick = { () => {history.push('/about')}} src = 'TheTechie.jpg' alt = 'img' ALIGN = 'left'/>
+          <img onClick = { () => {history.push('/about')}} src = 'TheTechie.jpg' alt = 'img'/>
         </div>
       </div>
       <div className = 'w50 endContent'>

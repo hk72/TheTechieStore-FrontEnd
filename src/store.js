@@ -161,7 +161,8 @@ const reducer = ( state, action ) => {
           isLoggedIn: false
         }
       }
-
+    break
+    default :
     break
   }
 

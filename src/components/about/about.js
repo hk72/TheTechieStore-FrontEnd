@@ -1,5 +1,4 @@
 import React from 'react'
-import history from '../../history'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
@@ -9,7 +8,7 @@ const About = (props) => {
   return(
     <div className = "minHeight">
       <div className = 'aboutImg'>
-        <img src = 'TheTechie.jpg' alt = 'IMAGE' />
+        <img src = 'TheTechie.jpg' alt = 'TheTechie' />
       </div>
       <div className = 'w80'>
         <p>

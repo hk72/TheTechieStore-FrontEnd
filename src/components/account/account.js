@@ -30,7 +30,7 @@ const Account = (props) => {
     .catch(err => {
       alert('An Error Has Occured. Please Try Again.')
     })
-  },[])
+  })
 
   const handleUsername = (e) => {
     e.preventDefault()
@@ -79,7 +79,6 @@ const Account = (props) => {
 
     const currentPassword = e.target['currentPassword'].value.toString()
     const newPassword = e.target['newPassword'].value.toString()
-    const reNewPassword = e.target['reNewPassword'].value.toString()
 
     if(e.target['newPassword'].value !== e.target['reNewPassword'].value){
       setPasswordErrors(['Make Sure New Passwords Match'])
@@ -177,7 +176,7 @@ const Account = (props) => {
                     <h3>Errors</h3>
                       <ul>
                         {usernameErrors.map((err, index) => {
-                          {return <li key = {index} className = "liText">{err}</li>}
+                          return <li key = {index} className = "liText">{err}</li>
                         })}
                       </ul>
                   </div>
@@ -205,7 +204,7 @@ const Account = (props) => {
                     <h3>Errors</h3>
                       <ul>
                         {passwordErrors.map((err, index) => {
-                          {return <li key = {index} className = "liText">{err}</li>}
+                          return <li key = {index} className = "liText">{err}</li>
                         })}
                       </ul>
                   </div>
@@ -239,7 +238,7 @@ const Account = (props) => {
                     <h3>Errors</h3>
                       <ul>
                         {deletionErrors.map((err, index) => {
-                          {return <li key = {index} className = "liText">{err}</li>}
+                          return <li key = {index} className = "liText">{err}</li>
                         })}
                       </ul>
                   </div>
