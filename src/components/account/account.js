@@ -10,26 +10,26 @@ const Account = (props) => {
   const [username, setUsername] = useState('')
 
   useEffect(() => {
-    fetch('https://thetechiestore.herokuapp.com/api/user/profile', {
-      method: 'GET',
-      credentials: 'include'
-    })
-    .then(res => res.json())
-    .then(res => {
-      if(res.message === "Successful"){
-        setUsername(res.username)
-      }
-      else if(res.message === "Internal Server Error"){
-        alert('An Error has Occured. Please Try Again.')
-      }
-      else if(res.message === "Auth Failed"){
-        props.setLoggedIn('false')
-        history.push('/login')
-      }
-    })
-    .catch(err => {
-      alert('An Error Has Occured. Please Try Again.')
-    })
+    // fetch('https://thetechiestore.herokuapp.com/api/user/profile', {
+    //   method: 'GET',
+    //   credentials: 'include'
+    // })
+    // .then(res => res.json())
+    // .then(res => {
+    //   if(res.message === "Successful"){
+    //     setUsername(res.username)
+    //   }
+    //   else if(res.message === "Internal Server Error"){
+    //     alert('An Error has Occured. Please Try Again.')
+    //   }
+    //   else if(res.message === "Auth Failed"){
+    //     props.setLoggedIn('false')
+    //     history.push('/login')
+    //   }
+    // })
+    // .catch(err => {
+    //   alert('An Error Has Occured. Please Try Again.')
+    // })
   })
 
   const handleUsername = (e) => {
@@ -163,7 +163,7 @@ const Account = (props) => {
 
   return(
     <div className = "minHeight">
-      <div style = {{paddingTop: "80px"}}>
+      <div style = {{paddingTop: "120px"}}>
         <div className = "accountCard">
           <h2>Username</h2>
           <hr style = {{marginTop: "0rem"}}></hr>
