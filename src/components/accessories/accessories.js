@@ -56,7 +56,7 @@ const Accessories = (props) => {
                     <p style = {{fontSize: "125%"}}>{props.products[13].NAME}</p>
                     <hr style = {{marginTop: "0rem", borderTop: "1px solid white"}}></hr>
                     <p>Cost: {props.products[13].PRICE}</p>
-                    <p>Description: {props.products[13].PRICE}</p>
+                    <p>Description: {props.products[13].DESCRIPTION}</p>
                     <p><Button variant="outline-light shadow-none" onClick = {() =>{
                       props.updateQuantities(13, 1)
                       props.addToCart(13)
