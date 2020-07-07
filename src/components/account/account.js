@@ -10,7 +10,7 @@ const Account = (props) => {
   const [username, setUsername] = useState('')
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/user/profile', {
+    fetch('https://thetechiestore.herokuapp.com/api/user/profile', {
       method: 'GET',
       credentials: 'include'
     })
@@ -39,7 +39,7 @@ const Account = (props) => {
 
     e.target['username'].value = ''
 
-    fetch('http://localhost:5000/api/user/updateUsername', {
+    fetch('https://thetechiestore.herokuapp.com/api/user/updateUsername', {
       method: 'PATCH',
       credentials: 'include',
       headers:{
@@ -88,7 +88,7 @@ const Account = (props) => {
       e.target['newPassword'].value = ''
       e.target['reNewPassword'].value = ''
 
-      fetch('http://localhost:5000/api/user/updatePassword', {
+      fetch('https://thetechiestore.herokuapp.com/api/user/updatePassword', {
         method: 'PATCH',
         credentials: 'include',
         headers:{
@@ -129,7 +129,7 @@ const Account = (props) => {
 
     const password =  e.target['password'].value.toString()
 
-    fetch('http://localhost:5000/api/user/delete', {
+    fetch('https://thetechiestore.herokuapp.com/api/user/delete', {
       method: 'DELETE',
       credentials: 'include',
       headers:{

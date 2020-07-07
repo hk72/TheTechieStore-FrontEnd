@@ -7,7 +7,7 @@ import Card from './card'
 const Cart = (props) => {
 
   useEffect(() =>{
-    fetch('http://localhost:5000/api/product/cart',{
+    fetch('https://thetechiestore.herokuapp.com/api/product/cart',{
       method: 'POST',
       headers:{
           'Content-Type':'application/json'

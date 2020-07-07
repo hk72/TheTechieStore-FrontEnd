@@ -6,7 +6,7 @@ import history from '../../history'
 const Navbar = (props) => {
 
   const handleLogout = () => {
-    fetch('http://localhost:5000/api/user/logout', {
+    fetch('https://thetechiestore.herokuapp.com/api/user/logout', {
       method: 'POST',
       credentials: 'include'
     })
