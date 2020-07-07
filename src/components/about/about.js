@@ -17,21 +17,6 @@ const About = (props) => {
           has proven to be a fun way to return to the Web Development world. I hope you enjoy it!
         </p>
       </div>
-      <div>
-        <div className = "table1">
-          <ul className = "list">
-            <li className = "listItem">
-              <a style = {{color: 'black'}} href = 'https://github.com/hk72'><FontAwesomeIcon icon={faGithub}/></a>
-            </li>
-            <li className = "listItem">
-              <a style = {{color: 'black'}} href = 'https://www.linkedin.com/in/hans-krohn-b7488b18a/'><FontAwesomeIcon icon={faLinkedinIn}/></a>
-            </li>
-            <li className = "listItem">
-              <a style = {{color: 'black'}} href = 'mailto:hanskrohn70@gmail.com'><FontAwesomeIcon icon={faEnvelope} /></a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
   )
 }
