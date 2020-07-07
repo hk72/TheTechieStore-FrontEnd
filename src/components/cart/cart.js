@@ -24,7 +24,7 @@ const Cart = (props) => {
   })
 
   const handleCheckout = () => {
-    fetch('http://localhost:5000/api/user/checkout',{
+    fetch('https://thetechiestore.herokuapp.com/api/user/checkout',{
       method: 'PATCH',
       credentials: 'include',
       headers:{
