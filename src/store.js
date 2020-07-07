@@ -169,13 +169,13 @@ const reducer = ( state, action ) => {
   return state
 }
 
-const middleware = compose(
-    applyMiddleware(ReduxThunk),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
+// const middleware = compose(
+//     applyMiddleware(ReduxThunk),
+//     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+// )
 
 export const store = createStore(
     reducer,
-    initialState,
-    middleware
+    initialState
+    // middleware
 )
