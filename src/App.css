@@ -1,7 +1,9 @@
 #root{
   background-color: #EAEAEA;
 }
-
+body{
+  overflow-x:hidden;
+}
 .w50{
   width: 50%;
 }
